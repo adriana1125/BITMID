@@ -13,8 +13,12 @@
     <header>
         <nav class="navbar">
 
-            <div class="logo">
-                <h2>BitMID</h2>
+            <div class="container-fluid">
+                 <a class="navbar-brand">
+      <img src="{{ asset('images/BITMID2.png') }}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+<h2 class="link-underline link-underline-0 link-dark">BitMID</h2>
+    </a>
+                
             </div>
 
             <ul class="menu">
