@@ -78,7 +78,7 @@ body {
             rgba(5, 10, 25, 0.65),
             rgba(5, 10, 25, 0.65)
         ),
-        /**url('https://api.mapbox.com/styles/v1/a21203210/cmuwv72xm006k01rwf7wbglsu/static/-89.6071,20.9609,11.73,336,60/1280x720@2x.jpeg?attribution=false&logo=false&access_token=pk.eyJ1IjoiYTIxMjAzMjEwIiwiYSI6ImNtdXJteGE2aTAwMXUyd3B6MXY3bmJmZGoifQ.WeGbBhGLoSFhPIAswsqCMA');**/
+        url('https://api.mapbox.com/styles/v1/a21203210/cmuwv72xm006k01rwf7wbglsu/static/-89.6071,20.9609,11.73,336,60/1280x720@2x.jpeg?attribution=false&logo=false&access_token=pk.eyJ1IjoiYTIxMjAzMjEwIiwiYSI6ImNtdXJteGE2aTAwMXUyd3B6MXY3bmJmZGoifQ.WeGbBhGLoSFhPIAswsqCMA');
 
     background-size: cover;
     background-position: center;
