@@ -213,7 +213,7 @@
     <div class="footer-inferior">
 
         <p>
-            © 2026 TECHTI. Todos los derechos reservados.
+            © 2026 BITMID. Todos los derechos reservados.
         </p>
 
     </div>
