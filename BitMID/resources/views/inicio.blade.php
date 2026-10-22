@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa TI</title>
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -13,8 +14,11 @@
     <header>
         <nav class="navbar">
 
-            <div class="logo">
-                <h2>BitMID</h2>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#inicio" aria-label="BitMID, ir al inicio">
+                    <img src="{{ asset('images/BITMID2.png') }}" alt="Logo de BitMID">
+                    <h2>BitMID</h2>
+                </a>
             </div>
 
             <ul class="menu">
@@ -154,6 +158,12 @@
                         rows="5"
                     ></textarea>
                 </div>
+                
+                <div class="g-recaptcha campo" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+
+                @error('captcha')
+                    <span class="text-danger" style="color: red; font-size: 0.9em;">{{ $message }}</span>
+                @enderror
 
                 <button type="submit">
                     Enviar mensaje
@@ -209,7 +219,7 @@
     <div class="footer-inferior">
 
         <p>
-            © 2026 TECHTI. Todos los derechos reservados.
+            © 2026 BITMID. Todos los derechos reservados.
         </p>
 
     </div>
