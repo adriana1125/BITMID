@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa TI</title>
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -14,11 +15,10 @@
         <nav class="navbar">
 
             <div class="container-fluid">
-                 <a class="navbar-brand">
-      <img src="{{ asset('images/BITMID2.png') }}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-<h2 class="link-underline link-underline-0 link-dark">BitMID</h2>
-    </a>
-                
+                <a class="navbar-brand" href="#inicio" aria-label="BitMID, ir al inicio">
+                    <img src="{{ asset('images/BITMID2.png') }}" alt="Logo de BitMID">
+                    <h2>BitMID</h2>
+                </a>
             </div>
 
             <ul class="menu">
@@ -158,6 +158,12 @@
                         rows="5"
                     ></textarea>
                 </div>
+                
+                <div class="g-recaptcha campo" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+
+                @error('captcha')
+                    <span class="text-danger" style="color: red; font-size: 0.9em;">{{ $message }}</span>
+                @enderror
 
                 <button type="submit">
                     Enviar mensaje
