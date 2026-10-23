@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa TI</title>
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -14,11 +15,10 @@
         <nav class="navbar">
 
             <div class="container-fluid">
-                 <a class="navbar-brand">
-      <img src="{{ asset('images/BITMID2.png') }}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-<h2 class="link-underline link-underline-0 link-dark">BitMID</h2>
-    </a>
-                
+                <a class="navbar-brand" href="#inicio" aria-label="BitMID, ir al inicio">
+                    <img src="{{ asset('images/BITMID2.png') }}" alt="Logo de BitMID">
+                    <h2>BitMID</h2>
+                </a>
             </div>
 
             <ul class="menu">
@@ -74,6 +74,135 @@
         </div>
 
     </section>
+
+    <section class="estadisticas">
+     <div class="estadisticas-contenido">
+
+        <div class="estadistica">
+            <h2>+50</h2>
+            <p>Proyectos completados</p>
+        </div>
+
+        <div class="estadistica">
+            <h2>+30</h2>
+            <p>Clientes satisfechos</p>
+        </div>
+
+        <div class="estadistica">
+            <h2>24/7</h2>
+            <p>Soporte técnico</p>
+        </div>
+
+        <div class="estadistica">
+            <h2>99%</h2>
+            <p>Disponibilidad</p>
+        </div>
+
+     </div>
+    </section>
+
+    <section class="ventajas">
+
+    <div class="ventajas-contenido">
+
+        <p class="etiqueta">¿POR QUÉ ELEGIRNOS?</p>
+
+        <h2>Impulsamos la transformación digital de tu empresa</h2>
+
+        <div class="ventajas-grid">
+
+            <div class="ventaja">
+                <h3>✅ Soluciones a medida</h3>
+                <p>
+                    Diseñamos herramientas adaptadas a las necesidades
+                    específicas de cada empresa.
+                </p>
+            </div>
+
+            <div class="ventaja">
+                <h3>✅ Seguridad de la información</h3>
+                <p>
+                    Protegemos los datos mediante buenas prácticas y
+                    procedimientos confiables.
+                </p>
+            </div>
+
+            <div class="ventaja">
+                <h3>✅ Soporte continuo</h3>
+                <p>
+                    Acompañamos a nuestros clientes antes, durante
+                    y después de la implementación.
+                </p>
+            </div>
+
+            <div class="ventaja">
+                <h3>✅ Innovación tecnológica</h3>
+                <p>
+                    Utilizamos herramientas modernas y escalables
+                    para impulsar el crecimiento empresarial.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="proceso">
+
+    <div class="proceso-contenido">
+
+        <p class="etiqueta">PROCESO DE TRABAJO</p>
+
+        <h2>¿Cómo trabajamos?</h2>
+
+        <p class="subtitulo">
+            Acompañamos a nuestros clientes en cada etapa del proyecto para garantizar resultados efectivos.
+        </p>
+
+        <div class="pasos">
+
+            <div class="paso">
+                <div class="numero">1</div>
+                <h3>Diagnóstico</h3>
+                <p>
+                    Analizamos las necesidades y objetivos de la empresa
+                    para identificar oportunidades de mejora.
+                </p>
+            </div>
+
+            <div class="paso">
+                <div class="numero">2</div>
+                <h3>Diseño</h3>
+                <p>
+                    Diseñamos una solución tecnológica adaptada a los
+                    requerimientos específicos del cliente.
+                </p>
+            </div>
+
+            <div class="paso">
+                <div class="numero">3</div>
+                <h3>Implementación</h3>
+                <p>
+                    Desarrollamos e integramos la solución asegurando
+                    un funcionamiento eficiente.
+                </p>
+            </div>
+
+            <div class="paso">
+                <div class="numero">4</div>
+                <h3>Soporte</h3>
+                <p>
+                    Brindamos acompañamiento continuo para garantizar
+                    el correcto desempeño del sistema.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
     <section class="servicios" id="servicios">
 
@@ -158,6 +287,12 @@
                         rows="5"
                     ></textarea>
                 </div>
+                
+                <div class="g-recaptcha campo" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+
+                @error('captcha')
+                    <span class="text-danger" style="color: red; font-size: 0.9em;">{{ $message }}</span>
+                @enderror
 
                 <button type="submit">
                     Enviar mensaje
@@ -213,7 +348,7 @@
     <div class="footer-inferior">
 
         <p>
-            © 2026 TECHTI. Todos los derechos reservados.
+            © 2026 BITMID. Todos los derechos reservados.
         </p>
 
     </div>

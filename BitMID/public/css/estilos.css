@@ -13,10 +13,17 @@ body {
 
 /* Barra de navegación */
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
 
     background-color: white;
     padding: 15px 5%;
@@ -24,11 +31,35 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Logotipo */
+/* Logotipo y nombre alineados horizontalmente */
 
-.logo h2 {
+.container-fluid {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #172033;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar-brand img {
+    display: block;
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar-brand h2 {
+    margin: 0;
     color: #172033;
     font-size: 24px;
+    line-height: 1;
 }
 
 /* Menú */
@@ -48,14 +79,14 @@ body {
 }
 
 .menu a:hover {
-    color: #2878d0;
+    color: #FF991C;
 }
 
 .boton-login a {
     display: inline-block;
 
-    background-color: #172033;
-    color: white;
+    background-color: #FF991C;
+    color: #172033;
 
     text-decoration: none;
     padding: 12px 20px;
@@ -67,17 +98,14 @@ body {
 }
 
 .boton-login a:hover {
-    background-color: #2878d0;
+    background-color:  #FF991C;
 }
 
 .hero {
     height: 450px;
 
     background-image: 
-        linear-gradient(
-            rgba(5, 10, 25, 0.65),
-            rgba(5, 10, 25, 0.65)
-        ),
+        
         url('https://api.mapbox.com/styles/v1/a21203210/cmuwv72xm006k01rwf7wbglsu/static/-89.6071,20.9609,11.73,336,60/1280x720@2x.jpeg?attribution=false&logo=false&access_token=pk.eyJ1IjoiYTIxMjAzMjEwIiwiYSI6ImNtdXJteGE2aTAwMXUyd3B6MXY3bmJmZGoifQ.WeGbBhGLoSFhPIAswsqCMA');
 
     background-size: cover;
@@ -121,7 +149,7 @@ body {
 }
 
 .etiqueta {
-    color: #2878d0;
+    color: #FF991C;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -258,7 +286,7 @@ body {
 
 .campo input:focus,
 .campo textarea:focus {
-    border-color: #2878d0;
+    border-color: #FF991C;
 }
 
 .formulario button {
@@ -268,8 +296,8 @@ body {
     border: none;
     border-radius: 8px;
 
-    background-color: #172033;
-    color: white;
+    background-color: #FF991C;
+    color: #172033;
 
     font-size: 16px;
     cursor: pointer;
@@ -278,11 +306,11 @@ body {
 }
 
 .formulario button:hover {
-    background-color: #2878d0;
+    background-color: #FF991C;
 }
 
 .footer {
-    background-color: #172033;
+    background-color: #da8217;
     color: white;
     padding-top: 60px;
 }
@@ -301,14 +329,16 @@ body {
 
 .footer-empresa {
     max-width: 300px;
+    color: #172033;
 }
 
 .footer-empresa h2 {
     margin-bottom: 15px;
+    color: #172033;
 }
 
 .footer-empresa p {
-    color: #c5cad3;
+    color: #172033;
     line-height: 1.6;
 }
 
@@ -317,14 +347,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: #172033;
 }
 
 .footer h3 {
     margin-bottom: 10px;
+    color: #172033;
 }
 
 .footer-enlaces a {
-    color: #c5cad3;
+    color: #172033;
     text-decoration: none;
 }
 
@@ -333,17 +365,17 @@ body {
 }
 
 .footer-contacto p {
-    color: #c5cad3;
+    color: #172033;
 }
 
 .footer-inferior {
-    border-top: 1px solid #30394c;
+    border-top: 1px solid #a8630e;
 
     text-align: center;
 
     padding: 20px;
 
-    color: #9da5b3;
+    color: #172033;
     font-size: 14px;
 }
 
@@ -374,4 +406,169 @@ body {
     align-items: center;
     }
 
+    .ventajas-grid {
+    grid-template-columns: 1fr;
+    }
+
+}
+
+/* Estadísticas */
+
+.estadisticas {
+    background-color: #ffffff;
+    padding: 40px 20px 80px;
+}
+
+.estadisticas-contenido {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.estadistica {
+    background: #fff;
+    min-width: 200px;
+
+    padding: 30px 25px;
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.estadistica:hover {
+    transform: translateY(-5px);
+}
+
+.estadistica h2 {
+    color: #c96f00;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.estadistica p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Ventajas */
+
+.ventajas {
+    padding: 100px 20px;
+    background-color: #f5f7fa;
+}
+
+.ventajas-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ventajas h2 {
+    color: #172033;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.ventajas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.ventaja {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+    text-align: left;
+
+    transition: transform 0.3s ease;
+}
+
+.ventaja:hover {
+    transform: translateY(-5px);
+}
+
+.ventaja h3 {
+    color: #c96f00;
+    margin-bottom: 12px;
+}
+
+.ventaja p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Proceso de trabajo */
+
+.proceso {
+    padding: 100px 20px;
+    background-color: white;
+}
+
+.proceso-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.proceso h2 {
+    color: #172033;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.pasos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.paso {
+    background-color: white;
+    width: 250px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.paso:hover {
+    transform: translateY(-5px);
+}
+
+.numero {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background-color: #c96f00;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.paso h3 {
+    color: #172033;
+    margin-bottom: 15px;
+}
+
+.paso p {
+    color: #555;
+    line-height: 1.6;
 }
