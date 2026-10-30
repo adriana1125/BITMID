@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Empresa TI</title>
+
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
 </head>
 
 <body>
 
+    <!-- BARRA DE NAVEGACIÓN -->
     <header>
         <nav class="navbar">
 
@@ -38,24 +40,73 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-contenido">
+   
+    
+<!-- INICIO CON VIDEO DE FONDO -->
+<section
+    class="hero"
+    id="inicio"
+    style="
+        position: relative;
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #172033;
+    "
+>
 
-            <h1>
-                Soluciones tecnológicas
-                <br>
-                que conectan tu empresa
-            </h1>
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 0;
+        "
+    >
+        <source src="{{ asset('images/bitmid.mp4') }}" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+    </video>
 
-            <p>
-                Gestiona ventas, clientes, inventario y proyectos
-                desde un solo panel inteligente.
-            </p>
+    <div
+        class="hero-contenido"
+        style="
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 900px;
+            padding: 20px;
+        "
+    >
 
-        </div>
+        <h1>
+            Soluciones tecnológicas
+            <br>
+            que conectan tu empresa
+        </h1>
 
-    </section>
+        <p>
+            Gestiona ventas, clientes, inventario y proyectos
+            desde un solo panel inteligente.
+        </p>
 
+    </div>
+
+</section>
+
+
+    <!-- NOSOTROS -->
     <section class="nosotros" id="nosotros">
 
     <div class="nosotros-contenido">
@@ -86,97 +137,99 @@
 
 </section>
 
+    <!-- ESTADÍSTICAS -->
     <section class="estadisticas">
-     <div class="estadisticas-contenido">
 
-        <div class="estadistica">
-            <h2>+50</h2>
-            <p>Proyectos completados</p>
+        <div class="estadisticas-contenido">
+
+            <div class="estadistica">
+                <h2>+50</h2>
+                <p>Proyectos completados</p>
+            </div>
+
+            <div class="estadistica">
+                <h2>+30</h2>
+                <p>Clientes satisfechos</p>
+            </div>
+
+            <div class="estadistica">
+                <h2>24/7</h2>
+                <p>Soporte técnico</p>
+            </div>
+
+            <div class="estadistica">
+                <h2>99%</h2>
+                <p>Disponibilidad</p>
+            </div>
+
         </div>
 
-        <div class="estadistica">
-            <h2>+30</h2>
-            <p>Clientes satisfechos</p>
-        </div>
-
-        <div class="estadistica">
-            <h2>24/7</h2>
-            <p>Soporte técnico</p>
-        </div>
-
-        <div class="estadistica">
-            <h2>99%</h2>
-            <p>Disponibilidad</p>
-        </div>
-
-     </div>
     </section>
-    <div class="transicion"></div>
+
+    <!-- VENTAJAS -->
     <section class="ventajas">
 
-    <div class="ventajas-contenido">
+        <div class="ventajas-contenido">
 
-        <p class="etiqueta">¿POR QUÉ ELEGIRNOS?</p>
+            <p class="etiqueta">¿POR QUÉ ELEGIRNOS?</p>
 
-        <h2>Impulsamos la transformación digital de tu empresa</h2>
+            <h2>Impulsamos la transformación digital de tu empresa</h2>
 
-        <div class="ventajas-grid">
+            <div class="ventajas-grid">
 
-            <div class="ventaja">
-              <img src="{{ asset('images/imagen_soluciones.jpg') }}" alt="Soluciones a medida">       
-                <h3>✅ Soluciones a medida</h3>
+                <div class="ventaja">
+                    <h3>✅ Soluciones a medida</h3>
                     <p>
                         Diseñamos herramientas adaptadas a las necesidades
                         específicas de cada empresa.
                     </p>
                 </div>
 
-            <div class="ventaja">
-              <img src="{{ asset('images/seguridad_imagen2.png') }}" alt="Seguridad de la información">
-                <h3>✅ Seguridad de la información</h3>
-                <p>
-                    Protegemos los datos mediante buenas prácticas y
-                    procedimientos confiables.
-                </p>
-            </div>
+                <div class="ventaja">
+                    <h3>✅ Seguridad de la información</h3>
+                    <p>
+                        Protegemos los datos mediante buenas prácticas y
+                        procedimientos confiables.
+                    </p>
+                </div>
 
-            <div class="ventaja">
-             <img src="{{ asset('images/soporte_imagen.jpg') }}" alt="Soporte continuo">    
-            <h3>✅ Soporte continuo</h3>
-                <p>
-                    Acompañamos a nuestros clientes antes, durante
-                    y después de la implementación.
-                </p>
-            </div>
+                <div class="ventaja">
+                    <h3>✅ Soporte continuo</h3>
+                    <p>
+                        Acompañamos a nuestros clientes antes, durante
+                        y después de la implementación.
+                    </p>
+                </div>
 
-            <div class="ventaja">
-             <img src="{{ asset('images/innovacion_imagen.jpg') }}" alt="Innovación tecnológica">
-                <h3>✅ Innovación tecnológica</h3>
-                <p>
-                    Utilizamos herramientas modernas y escalables
-                    para impulsar el crecimiento empresarial.
-                </p>
+                <div class="ventaja">
+                    <h3>✅ Innovación tecnológica</h3>
+                    <p>
+                        Utilizamos herramientas modernas y escalables
+                        para impulsar el crecimiento empresarial.
+                    </p>
+                </div>
+
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-<div class="transicion-abajo"></div>
-<section class="proceso">
+    <!-- PROCESO DE TRABAJO -->
+    <section class="proceso">
 
-    <div class="proceso-contenido">
+        <div class="proceso-contenido">
 
-        <p class="etiqueta">PROCESO DE TRABAJO</p>
+            <p class="etiqueta">PROCESO DE TRABAJO</p>
 
-        <h2>¿Cómo trabajamos?</h2>
+            <h2>¿Cómo trabajamos?</h2>
 
-        <p class="subtitulo">
-            Acompañamos a nuestros clientes en cada etapa del proyecto para garantizar resultados efectivos.
-        </p>
+            <p class="subtitulo">
+                Acompañamos a nuestros clientes en cada etapa del proyecto
+                para garantizar resultados efectivos.
+            </p>
 
-        <div class="pasos">
+            <div class="pasos">
 
             <div class="paso">
 
@@ -227,10 +280,9 @@
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-<div class="transicion"></div>
+    <!-- SERVICIOS -->
     <section class="servicios" id="servicios">
 
         <div class="servicios-contenido">
@@ -270,7 +322,8 @@
         </div>
 
     </section>
-<div class="transicion-abajo"></div>
+
+    <!-- CONTACTO -->
     <section class="contacto" id="contacto">
 
         <div class="contacto-contenido">
@@ -287,9 +340,9 @@
 
                 <div class="campo">
                     <label for="nombre">Nombre</label>
-                    <input 
-                        type="text" 
-                        id="nombre" 
+                    <input
+                        type="text"
+                        id="nombre"
                         name="nombre"
                         placeholder="Escribe tu nombre"
                     >
@@ -297,9 +350,9 @@
 
                 <div class="campo">
                     <label for="correo">Correo electrónico</label>
-                    <input 
-                        type="email" 
-                        id="correo" 
+                    <input
+                        type="email"
+                        id="correo"
                         name="correo"
                         placeholder="ejemplo@correo.com"
                     >
@@ -307,18 +360,23 @@
 
                 <div class="campo">
                     <label for="mensaje">Mensaje</label>
-                    <textarea 
-                        id="mensaje" 
+                    <textarea
+                        id="mensaje"
                         name="mensaje"
                         placeholder="Cuéntanos sobre tu proyecto"
                         rows="5"
                     ></textarea>
                 </div>
-                
-                <div class="g-recaptcha campo" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+
+                <div
+                    class="g-recaptcha campo"
+                    data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"
+                ></div>
 
                 @error('captcha')
-                    <span class="text-danger" style="color: red; font-size: 0.9em;">{{ $message }}</span>
+                    <span class="text-danger" style="color: red; font-size: 0.9em;">
+                        {{ $message }}
+                    </span>
                 @enderror
 
                 <button type="submit">
@@ -331,42 +389,41 @@
 
     </section>
 
-<footer class="footer">
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
 
-    <div class="footer-contenido">
+        <div class="footer-contenido">
 
-        <div class="footer-empresa">
+            <div class="footer-empresa">
 
-            <h2>BITMID</h2>
+                <h2>BITMID</h2>
 
-            <p>
-                Soluciones tecnológicas
-                para tu empresa.
-            </p>
+                <p>
+                    Soluciones tecnológicas
+                    para tu empresa.
+                </p>
 
-        </div>
+            </div>
 
-        <div class="footer-enlaces">
+            <div class="footer-enlaces">
 
-            <h3>Navegación</h3>
+                <h3>Navegación</h3>
 
-            <a href="#">Inicio</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
 
-            <a href="#servicios">Servicios</a>
+            </div>
 
-            <a href="#nosotros">Nosotros</a>
+            <div class="footer-contacto">
 
-            <a href="#contacto">Contacto</a>
+                <h3>Contacto</h3>
 
-        </div>
+                <p>contacto@bitmid.com</p>
+                <p>Mérida, Yucatán</p>
 
-        <div class="footer-contacto">
-
-            <h3>Contacto</h3>
-
-            <p>contacto@bitmid.com</p>
-
-            <p>Mérida, Yucatán</p>
+            </div>
 
         </div>
 
@@ -390,15 +447,13 @@
 
     </div>
 
-    <div class="footer-inferior">
+            <p>
+                © 2026 BITMID. Todos los derechos reservados.
+            </p>
 
-        <p>
-            © 2026 BITMID. Todos los derechos reservados.
-        </p>
+        </div>
 
-    </div>
-
-</footer>
+    </footer>
 
 </body>
 </html>
