@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa TI</title>
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
 </head>
 
 <body>
@@ -55,25 +58,33 @@
 
     <section class="nosotros" id="nosotros">
 
-        <div class="nosotros-contenido">
+    <div class="nosotros-contenido">
 
-            <p class="etiqueta">NOSOTROS</p>
+        <div class="nosotros-imagen">
+            <img src="{{ asset('images/nosotros.png') }}" alt="Equipo BITMID">
+        </div>
+
+        <div class="nosotros-info">
+
+            <span class="etiqueta">
+                NOSOTROS
+            </span>
 
             <h2>
-                Somos una empresa de TI
-                <br>
-                100% yucateca.
+                Somos una empresa de TI 100% yucateca.
             </h2>
 
-            <p class="descripcion">
-                Brindamos soluciones tecnológicas a la medida de las
-                necesidades de cada empresa, ayudándolas a mejorar
-                sus procesos y aprovechar al máximo la tecnología.
+            <p>
+                Brindamos soluciones tecnológicas a la medida de las necesidades
+                de cada empresa, ayudándolas a mejorar sus procesos y aprovechar
+                al máximo la tecnología.
             </p>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
     <section class="estadisticas">
      <div class="estadisticas-contenido">
@@ -100,7 +111,7 @@
 
      </div>
     </section>
-
+    <div class="transicion"></div>
     <section class="ventajas">
 
     <div class="ventajas-contenido">
@@ -112,14 +123,16 @@
         <div class="ventajas-grid">
 
             <div class="ventaja">
+              <img src="{{ asset('images/imagen_soluciones.jpg') }}" alt="Soluciones a medida">       
                 <h3>✅ Soluciones a medida</h3>
-                <p>
-                    Diseñamos herramientas adaptadas a las necesidades
-                    específicas de cada empresa.
-                </p>
-            </div>
+                    <p>
+                        Diseñamos herramientas adaptadas a las necesidades
+                        específicas de cada empresa.
+                    </p>
+                </div>
 
             <div class="ventaja">
+              <img src="{{ asset('images/seguridad_imagen2.png') }}" alt="Seguridad de la información">
                 <h3>✅ Seguridad de la información</h3>
                 <p>
                     Protegemos los datos mediante buenas prácticas y
@@ -128,7 +141,8 @@
             </div>
 
             <div class="ventaja">
-                <h3>✅ Soporte continuo</h3>
+             <img src="{{ asset('images/soporte_imagen.jpg') }}" alt="Soporte continuo">    
+            <h3>✅ Soporte continuo</h3>
                 <p>
                     Acompañamos a nuestros clientes antes, durante
                     y después de la implementación.
@@ -136,6 +150,7 @@
             </div>
 
             <div class="ventaja">
+             <img src="{{ asset('images/innovacion_imagen.jpg') }}" alt="Innovación tecnológica">
                 <h3>✅ Innovación tecnológica</h3>
                 <p>
                     Utilizamos herramientas modernas y escalables
@@ -148,6 +163,7 @@
     </div>
 
 </section>
+<div class="transicion-abajo"></div>
 <section class="proceso">
 
     <div class="proceso-contenido">
@@ -163,7 +179,11 @@
         <div class="pasos">
 
             <div class="paso">
-                <div class="numero">1</div>
+
+                 <img class="paso-img" src="{{ asset('images/diagnostico_imagen.png') }}" alt="Diagnóstico">
+
+                    <div class="numero">1</div>
+
                 <h3>Diagnóstico</h3>
                 <p>
                     Analizamos las necesidades y objetivos de la empresa
@@ -172,7 +192,9 @@
             </div>
 
             <div class="paso">
-                <div class="numero">2</div>
+                    <img class="paso-img" src="{{ asset('images/uiux.png') }}" alt="Diseño">
+
+                    <div class="numero">2</div>
                 <h3>Diseño</h3>
                 <p>
                     Diseñamos una solución tecnológica adaptada a los
@@ -181,7 +203,10 @@
             </div>
 
             <div class="paso">
-                <div class="numero">3</div>
+                    <img class="paso-img" src="{{ asset('images/implementacion.png') }}" alt="Implementacion">
+
+                    <div class="numero">3</div>
+
                 <h3>Implementación</h3>
                 <p>
                     Desarrollamos e integramos la solución asegurando
@@ -190,7 +215,9 @@
             </div>
 
             <div class="paso">
-                <div class="numero">4</div>
+                <img class="paso-img" src="{{ asset('images/soporte2.webp') }}" alt="Soporte">
+
+                    <div class="numero">4</div>
                 <h3>Soporte</h3>
                 <p>
                     Brindamos acompañamiento continuo para garantizar
@@ -203,7 +230,7 @@
     </div>
 
 </section>
-
+<div class="transicion"></div>
     <section class="servicios" id="servicios">
 
         <div class="servicios-contenido">
@@ -243,7 +270,7 @@
         </div>
 
     </section>
-
+<div class="transicion-abajo"></div>
     <section class="contacto" id="contacto">
 
         <div class="contacto-contenido">
@@ -341,6 +368,24 @@
 
             <p>Mérida, Yucatán</p>
 
+        </div>
+
+            <div class="redes-sociales">
+            <a href="#" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+            </a>
         </div>
 
     </div>

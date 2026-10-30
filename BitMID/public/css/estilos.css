@@ -143,13 +143,40 @@ header {
 }
 
 .nosotros-contenido {
-    max-width: 900px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    max-width: 1400px;
     margin: 0 auto;
-    text-align: center;
 }
 
+.nosotros-imagen {
+    width: 55%;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.nosotros-info {
+    width: 45%;
+}
+
+.nosotros-info h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 15px 0 25px;
+}
+
+.nosotros-info p {
+    line-height: 1.8;
+    color: #555;
+}
 .etiqueta {
-    color: #FF991C;
+    color: #a8630e;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -175,7 +202,7 @@ header {
 
 .servicios {
     padding: 100px 20px;
-    background-color: #f5f7fa;
+    background-color: #f0a12a;
 }
 
 .servicios-contenido {
@@ -310,7 +337,7 @@ header {
 }
 
 .footer {
-    background-color: #da8217;
+    background-color: #FF991C;
     color: white;
     padding-top: 60px;
 }
@@ -369,7 +396,7 @@ header {
 }
 
 .footer-inferior {
-    border-top: 1px solid #a8630e;
+    border-top: 1px solid #FF991C;
 
     text-align: center;
 
@@ -462,7 +489,7 @@ header {
 
 .ventajas {
     padding: 100px 20px;
-    background-color: #f5f7fa;
+    background-color: #f0a12a;
 }
 
 .ventajas-contenido {
@@ -500,7 +527,7 @@ header {
 }
 
 .ventaja h3 {
-    color: #c96f00;
+    color: #172033;
     margin-bottom: 12px;
 }
 
@@ -514,6 +541,14 @@ header {
 .proceso {
     padding: 100px 20px;
     background-color: white;
+}
+
+.ventaja img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .proceso-contenido {
@@ -544,6 +579,13 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
+.paso-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
 
 .paso:hover {
     transform: translateY(-5px);
@@ -571,4 +613,52 @@ header {
 .paso p {
     color: #555;
     line-height: 1.6;
+}
+
+.transicion {
+    height: 180px;
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        #fff6e8,
+        #fde7bf,
+        #f0a12a
+    );
+}
+
+.transicion-abajo {
+    height: 150px;
+    background: linear-gradient(
+        to bottom,
+        #f0a12a 0%,
+        #fde7bf 40%,
+        #fff6e8 70%,
+        #ffffff 100%
+    );
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #172033;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    background: white;
+    color: #c96f00;
+    transform: translateY(-4px);
 }
