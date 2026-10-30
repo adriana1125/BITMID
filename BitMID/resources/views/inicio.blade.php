@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
 </head>
 
 <body>
@@ -108,25 +109,33 @@
     <!-- NOSOTROS -->
     <section class="nosotros" id="nosotros">
 
-        <div class="nosotros-contenido">
+    <div class="nosotros-contenido">
 
-            <p class="etiqueta">NOSOTROS</p>
+        <div class="nosotros-imagen">
+            <img src="{{ asset('images/nosotros.png') }}" alt="Equipo BITMID">
+        </div>
+
+        <div class="nosotros-info">
+
+            <span class="etiqueta">
+                NOSOTROS
+            </span>
 
             <h2>
-                Somos una empresa de TI
-                <br>
-                100% yucateca.
+                Somos una empresa de TI 100% yucateca.
             </h2>
 
-            <p class="descripcion">
-                Brindamos soluciones tecnológicas a la medida de las
-                necesidades de cada empresa, ayudándolas a mejorar
-                sus procesos y aprovechar al máximo la tecnología.
+            <p>
+                Brindamos soluciones tecnológicas a la medida de las necesidades
+                de cada empresa, ayudándolas a mejorar sus procesos y aprovechar
+                al máximo la tecnología.
             </p>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
     <!-- ESTADÍSTICAS -->
     <section class="estadisticas">
@@ -222,42 +231,51 @@
 
             <div class="pasos">
 
-                <div class="paso">
+            <div class="paso">
+
+                 <img class="paso-img" src="{{ asset('images/diagnostico_imagen.png') }}" alt="Diagnóstico">
+
                     <div class="numero">1</div>
-                    <h3>Diagnóstico</h3>
-                    <p>
-                        Analizamos las necesidades y objetivos de la empresa
-                        para identificar oportunidades de mejora.
-                    </p>
-                </div>
 
-                <div class="paso">
+                <h3>Diagnóstico</h3>
+                <p>
+                    Analizamos las necesidades y objetivos de la empresa
+                    para identificar oportunidades de mejora.
+                </p>
+            </div>
+
+            <div class="paso">
+                    <img class="paso-img" src="{{ asset('images/uiux.png') }}" alt="Diseño">
+
                     <div class="numero">2</div>
-                    <h3>Diseño</h3>
-                    <p>
-                        Diseñamos una solución tecnológica adaptada a los
-                        requerimientos específicos del cliente.
-                    </p>
-                </div>
+                <h3>Diseño</h3>
+                <p>
+                    Diseñamos una solución tecnológica adaptada a los
+                    requerimientos específicos del cliente.
+                </p>
+            </div>
 
-                <div class="paso">
+            <div class="paso">
+                    <img class="paso-img" src="{{ asset('images/implementacion.png') }}" alt="Implementacion">
+
                     <div class="numero">3</div>
-                    <h3>Implementación</h3>
-                    <p>
-                        Desarrollamos e integramos la solución asegurando
-                        un funcionamiento eficiente.
-                    </p>
-                </div>
 
-                <div class="paso">
+                <h3>Implementación</h3>
+                <p>
+                    Desarrollamos e integramos la solución asegurando
+                    un funcionamiento eficiente.
+                </p>
+            </div>
+
+            <div class="paso">
+                <img class="paso-img" src="{{ asset('images/soporte2.webp') }}" alt="Soporte">
+
                     <div class="numero">4</div>
-                    <h3>Soporte</h3>
-                    <p>
-                        Brindamos acompañamiento continuo para garantizar
-                        el correcto desempeño del sistema.
-                    </p>
-                </div>
-
+                <h3>Soporte</h3>
+                <p>
+                    Brindamos acompañamiento continuo para garantizar
+                    el correcto desempeño del sistema.
+                </p>
             </div>
 
         </div>
@@ -409,7 +427,25 @@
 
         </div>
 
-        <div class="footer-inferior">
+            <div class="redes-sociales">
+            <a href="#" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+
+    </div>
 
             <p>
                 © 2026 BITMID. Todos los derechos reservados.
