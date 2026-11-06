@@ -34,7 +34,7 @@
             </ul>
 
             <div class="boton-login">
-                <a href="#">Iniciar Sesión</a>
+               <a href="{{ route('login') }}">Iniciar Sesión</a>
             </div>
 
         </nav>
