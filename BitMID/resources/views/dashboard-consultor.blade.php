@@ -17,7 +17,9 @@
     <!-- Sidebar -->
     <aside class="sidebar">
 
-        <h2>BitMID</h2>
+        <a href="/" class="logo-link">
+            <h2>BitMID</h2>
+        </a>
 
         <p class="rol">Consultor</p>
 

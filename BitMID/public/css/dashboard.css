@@ -132,3 +132,12 @@ body{
         grid-template-columns:1fr;
     }
 }
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link:hover h2 {
+    color: #0A3268;
+    cursor: pointer;
+}

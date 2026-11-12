@@ -35,6 +35,7 @@
 
             <div class="boton-login">
                <a href="{{ route('login') }}">Iniciar Sesión</a>
+                <a href="/registro" class="btn-registro">Registrarse</a>
             </div>
 
         </nav>

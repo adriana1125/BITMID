@@ -45,3 +45,23 @@ Route::post('/recuperar-password', function () {
 Route::get('/dashboard-consultor', function () {
     return view('dashboard-consultor');
 });
+
+Route::get('/registro', function () {
+    return view('registro');
+});
+
+Route::get('/registro-empresa', function () {
+    return view('registro-empresa');
+});
+
+Route::get('/giro-empresa', function () {
+    return view('giro-empresa');
+});
+Route::get('/tamano-empresa', function () {
+    return view('tamano-empresa');
+});
+
+Route::get('/datos-empresa', function () {
+    return view('datos-empresa');
+});
+

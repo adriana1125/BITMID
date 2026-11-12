@@ -662,3 +662,136 @@ header {
     color: #c96f00;
     transform: translateY(-4px);
 }
+
+.botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-login,
+.btn-registro {
+    background-color: #FF991C;
+    color: #172033;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    border: none;
+}
+
+.btn-login {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: #0b5ed7;
+}
+
+.btn-registro {
+    background-color: #198754;
+    color: white;
+}
+
+.btn-registro:hover {
+    background-color: #157347;
+}
+
+/* ========================= */
+/* REGISTRO */
+/* ========================= */
+
+.registro {
+    background-color: #f7f9fc;
+    padding: 80px 20px;
+}
+
+.registro-contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.registro-header {
+    background-color: #172033;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px 20px 0 0;
+}
+
+.registro-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.registro-header p {
+    color: #d9d9d9;
+}
+
+.registro-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.seccion-formulario {
+    margin-bottom: 50px;
+}
+
+.seccion-formulario h2 {
+    color: #172033;
+    margin-bottom: 25px;
+    border-left: 6px solid #FF991C;
+    padding-left: 15px;
+}
+
+.registro-form input,
+.registro-form select,
+.registro-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.registro-form input:focus,
+.registro-form select:focus,
+.registro-form textarea:focus {
+    border-color: #FF991C;
+    outline: none;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.servicios-grid label {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-crear-cuenta {
+    width: 100%;
+    background-color: #FF991C;
+    color: #172033;
+    border: none;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-crear-cuenta:hover {
+    background-color: #e68a0e;
+}
