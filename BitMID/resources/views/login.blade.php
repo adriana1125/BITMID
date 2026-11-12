@@ -37,7 +37,8 @@
                     required>
             </div>
 
-            <button type="submit">
+            <button type="button"
+                onclick="window.location.href='/dashboard-consultor'">
                 Iniciar sesión
             </button>
 
