@@ -21,12 +21,13 @@
             Crea tus credenciales para comenzar tu proceso de transformación digital.
         </p>
 
-        <form action="/giro-empresa" method="GET">
-
+        <form action="/registro" method="POST">
+            @csrf
             <div class="campo">
                 <label>Correo electrónico</label>
                 <input
                     type="email"
+                    name="email"
                     placeholder="ejemplo@empresa.com"
                     required>
             </div>
@@ -35,6 +36,7 @@
                 <label>Contraseña</label>
                 <input
                     type="password"
+                    name="password"
                     placeholder="••••••••"
                     required>
             </div>
@@ -43,6 +45,7 @@
                 <label>Confirmar contraseña</label>
                 <input
                     type="password"
+                    name="password_confirmation"
                     placeholder="••••••••"
                     required>
             </div>
@@ -60,6 +63,9 @@
 
             <a href="/login" class="volver">
                 Iniciar sesión
+            </a>
+            <a href="/" class="volver">
+                Regresar al inicio
             </a>
 
         </div>

@@ -50,6 +50,10 @@ Route::get('/registro', function () {
     return view('registro');
 });
 
+use App\Http\Controllers\RegistroController;
+
+Route::post('/registro', [RegistroController::class, 'guardar']);
+
 Route::get('/registro-empresa', function () {
     return view('registro-empresa');
 });
