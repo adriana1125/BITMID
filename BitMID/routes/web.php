@@ -29,3 +29,39 @@ Route::get('/', function () {
 
     return view('inicio', compact('servicios'));
 });
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::get('/recuperar-password', function () {
+    return view('recuperar-password');
+})->name('password.request');
+
+Route::post('/recuperar-password', function () {
+    return back()->with('success', 'Se ha enviado un enlace de recuperación.');
+})->name('password.email');
+
+Route::get('/dashboard-consultor', function () {
+    return view('dashboard-consultor');
+});
+
+Route::get('/registro', function () {
+    return view('registro');
+});
+
+Route::get('/registro-empresa', function () {
+    return view('registro-empresa');
+});
+
+Route::get('/giro-empresa', function () {
+    return view('giro-empresa');
+});
+Route::get('/tamano-empresa', function () {
+    return view('tamano-empresa');
+});
+
+Route::get('/datos-empresa', function () {
+    return view('datos-empresa');
+});
+
