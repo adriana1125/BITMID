@@ -58,7 +58,7 @@
         Cuéntanos un poco más sobre tu empresa.
     </p>
 
-    <form action="/dashboard-consultor" method="GET">
+    <form action="/perfil" method="GET">
 
         <div class="campo">
             <label for="empresa">Nombre de la empresa</label>
