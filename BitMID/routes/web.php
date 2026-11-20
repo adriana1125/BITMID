@@ -28,7 +28,7 @@ Route::get('/', function () {
     ];
 
     return view('inicio', compact('servicios'));
-});
+})->name('inicio');
 
 Route::get('/login', function () {
     return view('login');
@@ -65,3 +65,6 @@ Route::get('/datos-empresa', function () {
     return view('datos-empresa');
 });
 
+Route::get('/soluciones', function () {
+    return view('soluciones');
+})->name('soluciones');
