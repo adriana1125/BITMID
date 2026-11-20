@@ -170,7 +170,7 @@
 
         <div class="nosotros-info">
 
-            <span class="etiqueta">
+            <span class="sub-servicios">
                 Soporte tecnológico
             </span>
 
@@ -198,7 +198,7 @@
 
         <div class="nosotros-info">
 
-            <span class="etiqueta">
+            <span class="sub-servicios">
                 Ciberseguridad
             </span>
 

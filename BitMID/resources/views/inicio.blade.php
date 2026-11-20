@@ -171,7 +171,7 @@
 
         <div class="ventajas-contenido">
 
-            <p class="etiqueta">¿POR QUÉ ELEGIRNOS?</p>
+            <p class="sub-servicios">¿POR QUÉ ELEGIRNOS?</p>
 
             <h2>Impulsamos la transformación digital de tu empresa</h2>
 
