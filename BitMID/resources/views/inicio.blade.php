@@ -118,20 +118,19 @@
 
         <div class="nosotros-info">
 
-            <span class="etiqueta">
-                NOSOTROS
-            </span>
+           <h2 class="etiqueta">
+                Nosotros
+           </h2>
 
-            <h2>
+            <p class="subtitulo-seccion">
                 Somos una empresa de TI 100% yucateca.
-            </h2>
+            </p>
 
-            <p>
+            <p class="descripcion">
                 Brindamos soluciones tecnológicas a la medida de las necesidades
                 de cada empresa, ayudándolas a mejorar sus procesos y aprovechar
                 al máximo la tecnología.
             </p>
-
         </div>
 
     </div>
@@ -221,9 +220,9 @@
 
         <div class="proceso-contenido">
 
-            <p class="etiqueta">PROCESO DE TRABAJO</p>
+           <h2 class="etiqueta">PROCESO DE TRABAJO</h2>
 
-            <h2>¿Cómo trabajamos?</h2>
+            <p class="subtitulo-seccion">¿Cómo trabajamos?</p>
 
             <p class="subtitulo">
                 Acompañamos a nuestros clientes en cada etapa del proyecto
@@ -234,7 +233,7 @@
 
             <div class="paso">
 
-                 <img class="paso-img" src="{{ asset('images/diagnostico_imagen.png') }}" alt="Diagnóstico">
+                 <img class="paso-img" src="{{ asset('images/diagnostico1.jpg') }}" alt="Diagnóstico">
 
                     <div class="numero">1</div>
 
@@ -246,7 +245,7 @@
             </div>
 
             <div class="paso">
-                    <img class="paso-img" src="{{ asset('images/uiux.png') }}" alt="Diseño">
+                    <img class="paso-img" src="{{ asset('images/diseñoweb.jpg') }}" alt="Diseño">
 
                     <div class="numero">2</div>
                 <h3>Diseño</h3>
@@ -257,7 +256,7 @@
             </div>
 
             <div class="paso">
-                    <img class="paso-img" src="{{ asset('images/implementacion.png') }}" alt="Implementacion">
+                    <img class="paso-img" src="{{ asset('images/implementacion5.jpg') }}" alt="Implementacion">
 
                     <div class="numero">3</div>
 
@@ -269,7 +268,7 @@
             </div>
 
             <div class="paso">
-                <img class="paso-img" src="{{ asset('images/soporte2.webp') }}" alt="Soporte">
+                <img class="paso-img" src="{{ asset('images/soporte5.jpg') }}" alt="Soporte">
 
                     <div class="numero">4</div>
                 <h3>Soporte</h3>
@@ -287,10 +286,10 @@
     <section class="servicios" id="servicios">
 
         <div class="servicios-contenido">
+        
+            <h2 class="etiqueta">SERVICIOS</h2>
 
-            <p class="etiqueta">SERVICIOS</p>
-
-            <h2>Nuestras soluciones</h2>
+             <p class="sub-servicios">Nuestras soluciones</p>
 
             <p class="subtitulo">
                 Tecnología pensada para las necesidades de tu empresa.
