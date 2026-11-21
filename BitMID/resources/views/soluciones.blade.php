@@ -138,7 +138,7 @@
 
         <div class="nosotros-info">
 
-            <span class="etiqueta">
+            <span class="sub-servicios">
                 Soluciones web
             </span>
 
@@ -170,7 +170,7 @@
 
         <div class="nosotros-info">
 
-            <span class="etiqueta">
+            <span class="sub-servicios">
                 Soporte tecnológico
             </span>
 
