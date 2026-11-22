@@ -38,7 +38,7 @@
             </div>
 
             <button type="button"
-                onclick="window.location.href='/dashboard-consultor'">
+                onclick="window.location.href='/perfil'">
                 Iniciar sesión
             </button>
 

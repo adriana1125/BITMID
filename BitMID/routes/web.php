@@ -65,6 +65,9 @@ Route::get('/datos-empresa', function () {
     return view('datos-empresa');
 });
 
+Route::get('/perfil', function () {
+    return view('perfil');
+});
 Route::get('/soluciones', function () {
     return view('soluciones');
 })->name('soluciones');
