@@ -29,7 +29,7 @@
                 <li><a href="{{ route('soluciones') }}">Soluciones</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="{{ route('contacto') }}">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
 
             <div class="boton-login">
@@ -45,43 +45,83 @@
     id="inicio-contacto"
 >
 
-    <img 
-        src="https://api.mapbox.com/styles/v1/a21203210/cmuwv72xm006k01rwf7wbglsu/static/pin-l+4682b4(-89.6125,21.04465)/-89.6332,20.953,11.93,0,45/1280x720@2x.png?attribution=false&logo=false&access_token=pk.eyJ1IjoiYTIxMjAzMjEwIiwiYSI6ImNtdXJteGE2aTAwMXUyd3B6MXY3bmJmZGoifQ.WeGbBhGLoSFhPIAswsqCMA" 
-        alt="Imagen de contacto" 
-        style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        ">
 
-    <div
-        class="hero-contenido"
-        style="
-            position: relative;
-            z-index: 2;
-            color: white;
-            max-width: 900px;
-            padding: 20px;
-        "
-    >
+    <div class="nosotros-info" style="z-index: 2, justify-content: left; align-items: left; text-align: left; margin-left: 20px;">
 
-        <h1>
-            Soluciones 
-            <br>
-            que ofrecemos
-        </h1>
+            <h1 class="sub-servicios">
+                Ubicación
+            </h1>
 
-        <p>
-            Gestion, infraestructura y desarrollo de software para tu empresa.
-        </p>
+        
 
-    </div>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1466.699522172578!2d-89.61356444132609!3d21.043895503644116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56773cf7fc08c3%3A0x7564912c3dde335e!2sTheSky!5e1!3m2!1ses-419!2smx!4v1795386569135!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
 </section>
+
+    <section class="contacto" id="contacto">
+
+        <div class="contacto-contenido">
+
+            <p class="etiqueta">CONTACTO</p>
+
+            <h2>¿Tienes un proyecto en mente?</h2>
+
+            <p class="subtitulo">
+                Cuéntanos sobre tu proyecto y nos pondremos en contacto contigo.
+            </p>
+
+            <form class="formulario">
+
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        placeholder="Cuéntanos sobre tu proyecto"
+                        rows="5"
+                    ></textarea>
+                </div>
+
+                <div
+                    class="g-recaptcha campo"
+                    data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"
+                ></div>
+
+                @error('captcha')
+                    <span class="text-danger" style="color: red; font-size: 0.9em;">
+                        {{ $message }}
+                    </span>
+                @enderror
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
 
 <footer class="footer">
 

@@ -130,7 +130,7 @@
 
 </section>
 
-<section class="servicios" id="soporte">
+<section class="servicios" id="web">
 
     <div class="nosotros-contenido">
 
