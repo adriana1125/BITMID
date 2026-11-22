@@ -68,3 +68,7 @@ Route::get('/datos-empresa', function () {
 Route::get('/soluciones', function () {
     return view('soluciones');
 })->name('soluciones');
+
+Route::get('/contacto', function () {
+    return view('contacto');
+})->name('contacto');

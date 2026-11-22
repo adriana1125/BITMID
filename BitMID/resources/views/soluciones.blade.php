@@ -30,7 +30,7 @@
                 <li><a href="{{ route('soluciones') }}">Soluciones</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="{{ route('contacto') }}">Contacto</a></li>
             </ul>
 
             <div class="boton-login">
