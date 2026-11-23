@@ -75,3 +75,11 @@ Route::get('/soluciones', function () {
 Route::get('/contacto', function () {
     return view('contacto');
 })->name('contacto');
+
+Route::get('/servicios', function () {
+    return view('servicios');
+})->name('servicios');
+
+Route::get('/nosotros', function () {
+    return view('nosotros');
+})->name('nosotros');

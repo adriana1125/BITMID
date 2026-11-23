@@ -28,8 +28,8 @@
 
             <ul class="menu">
                 <li><a href="{{ route('soluciones') }}">Soluciones</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="{{ route('servicios') }}">Servicios</a></li>
+                <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
                 <li><a href="{{ route('contacto') }}">Contacto</a></li>
             </ul>
 
@@ -240,10 +240,10 @@
 
                 <h3>Navegación</h3>
 
-                <a href="#inicio">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contacto</a>
+                <a href="{{ route('inicio') }}">Inicio</a>
+                <a href="{{ route('servicios') }}">Servicios</a>
+                <a href="{{ route('nosotros') }}">Nosotros</a>
+                <a href="{{ route('contacto') }}">Contacto</a>
 
             </div>
 

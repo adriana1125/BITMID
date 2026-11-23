@@ -415,8 +415,48 @@ header {
     color: #172033;
     font-size: 14px;
 }
+/* Sección de ubicación en Contacto */
+#inicio-contacto.hero {
+    height: auto;
+    min-height: 590px;
+    padding: 35px 20px;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Contenedor de ubicación */
+#inicio-contacto .ubicacion-info {
+    width: 100%;
+    max-width: 640px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Mapa de Google */
+#inicio-contacto .ubicacion-info iframe {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+#inicio-contacto .ubicacion-info p {
+    color: #ffffff;
+}
+/* Adaptación para celulares */
 @media (max-width: 768px) {
+
+    #inicio-contacto.hero {
+        min-height: auto;
+        padding: 30px 15px;
+    }
+
+    #inicio-contacto .ubicacion-info iframe {
+        height: 350px;
+    }
+
+
 
     .tarjetas {
         flex-direction: column;
@@ -680,4 +720,6 @@ header {
     color: #c96f00;
     transform: translateY(-4px);
 }
+
+
 
