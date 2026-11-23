@@ -19,12 +19,14 @@
 
         <p>Ingresa tus credenciales para acceder al sistema.</p>
 
-        <form>
+        <form action="{{ route('sesion.demo') }}" method="POST">
+            @csrf
 
             <div class="campo">
                 <label>Correo electrónico</label>
                 <input
                     type="email"
+                    name="correo"
                     placeholder="ejemplo@bitmid.com"
                     required>
             </div>
@@ -33,12 +35,12 @@
                 <label>Contraseña</label>
                 <input
                     type="password"
+                    name="password"
                     placeholder="••••••••"
                     required>
             </div>
 
-            <button type="button"
-                onclick="window.location.href='/perfil'">
+            <button type="submit">
                 Iniciar sesión
             </button>
 

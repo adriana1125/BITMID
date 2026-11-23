@@ -82,7 +82,8 @@ header {
     color: #FF991C;
 }
 
-.boton-login a {
+.boton-login a,
+.boton-login button {
     display: inline-block;
 
     background-color: #FF991C;
@@ -93,12 +94,26 @@ header {
 
     border-radius: 8px;
     font-size: 14px;
+    font-family: Arial, sans-serif;
+
+    border: none;
+    cursor: pointer;
 
     transition: background-color 0.3s;
 }
 
-.boton-login a:hover {
-    background-color:  #FF991C;
+.boton-login a:hover,
+.boton-login button:hover {
+    background-color: #e68a0e;
+}
+
+.boton-login form {
+    display: inline-block;
+    margin: 0;
+}
+
+.boton-login button {
+    line-height: normal;
 }
 
 .hero {
