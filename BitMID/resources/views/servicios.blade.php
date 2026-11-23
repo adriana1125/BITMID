@@ -1,4 +1,4 @@
-    <x-header/>
+    <x-header page-css="css/estilos.css"/>
 
     <main>
 
