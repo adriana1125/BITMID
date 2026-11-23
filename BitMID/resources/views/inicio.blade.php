@@ -10,34 +10,13 @@
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
 </head>
 
 <body>
 
     <!-- BARRA DE NAVEGACIÓN -->
-    <header>
-        <nav class="navbar">
-
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#inicio" aria-label="BitMID, ir al inicio">
-                    <img src="{{ asset('images/BITMID2.png') }}" alt="Logo de BitMID">
-                    <h2>BitMID</h2>
-                </a>
-            </div>
-
-            <ul class="menu">
-                <li><a href="#soluciones">Soluciones</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-
-            <div class="boton-login">
-                <a href="#">Iniciar Sesión</a>
-            </div>
-
-        </nav>
-    </header>
+    <x-header/>
 
    
     
@@ -108,25 +87,32 @@
     <!-- NOSOTROS -->
     <section class="nosotros" id="nosotros">
 
-        <div class="nosotros-contenido">
+    <div class="nosotros-contenido">
 
-            <p class="etiqueta">NOSOTROS</p>
-
-            <h2>
-                Somos una empresa de TI
-                <br>
-                100% yucateca.
-            </h2>
-
-            <p class="descripcion">
-                Brindamos soluciones tecnológicas a la medida de las
-                necesidades de cada empresa, ayudándolas a mejorar
-                sus procesos y aprovechar al máximo la tecnología.
-            </p>
-
+        <div class="nosotros-imagen">
+            <img src="{{ asset('images/nosotros.png') }}" alt="Equipo BITMID">
         </div>
 
-    </section>
+        <div class="nosotros-info">
+
+           <h2 class="etiqueta">
+                Nosotros
+           </h2>
+
+            <p class="subtitulo-seccion">
+                Somos una empresa de TI 100% yucateca.
+            </p>
+
+            <p class="descripcion">
+                Brindamos soluciones tecnológicas a la medida de las necesidades
+                de cada empresa, ayudándolas a mejorar sus procesos y aprovechar
+                al máximo la tecnología.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
     <!-- ESTADÍSTICAS -->
     <section class="estadisticas">
@@ -162,7 +148,7 @@
 
         <div class="ventajas-contenido">
 
-            <p class="etiqueta">¿POR QUÉ ELEGIRNOS?</p>
+            <p class="sub-servicios">¿POR QUÉ ELEGIRNOS?</p>
 
             <h2>Impulsamos la transformación digital de tu empresa</h2>
 
@@ -211,9 +197,9 @@
 
         <div class="proceso-contenido">
 
-            <p class="etiqueta">PROCESO DE TRABAJO</p>
+           <h2 class="etiqueta">PROCESO DE TRABAJO</h2>
 
-            <h2>¿Cómo trabajamos?</h2>
+            <p class="subtitulo-seccion">¿Cómo trabajamos?</p>
 
             <p class="subtitulo">
                 Acompañamos a nuestros clientes en cada etapa del proyecto
@@ -222,42 +208,51 @@
 
             <div class="pasos">
 
-                <div class="paso">
+            <div class="paso">
+
+                 <img class="paso-img" src="{{ asset('images/diagnostico1.jpg') }}" alt="Diagnóstico">
+
                     <div class="numero">1</div>
-                    <h3>Diagnóstico</h3>
-                    <p>
-                        Analizamos las necesidades y objetivos de la empresa
-                        para identificar oportunidades de mejora.
-                    </p>
-                </div>
 
-                <div class="paso">
+                <h3>Diagnóstico</h3>
+                <p>
+                    Analizamos las necesidades y objetivos de la empresa
+                    para identificar oportunidades de mejora.
+                </p>
+            </div>
+
+            <div class="paso">
+                    <img class="paso-img" src="{{ asset('images/diseñoweb.jpg') }}" alt="Diseño">
+
                     <div class="numero">2</div>
-                    <h3>Diseño</h3>
-                    <p>
-                        Diseñamos una solución tecnológica adaptada a los
-                        requerimientos específicos del cliente.
-                    </p>
-                </div>
+                <h3>Diseño</h3>
+                <p>
+                    Diseñamos una solución tecnológica adaptada a los
+                    requerimientos específicos del cliente.
+                </p>
+            </div>
 
-                <div class="paso">
+            <div class="paso">
+                    <img class="paso-img" src="{{ asset('images/implementacion5.jpg') }}" alt="Implementacion">
+
                     <div class="numero">3</div>
-                    <h3>Implementación</h3>
-                    <p>
-                        Desarrollamos e integramos la solución asegurando
-                        un funcionamiento eficiente.
-                    </p>
-                </div>
 
-                <div class="paso">
+                <h3>Implementación</h3>
+                <p>
+                    Desarrollamos e integramos la solución asegurando
+                    un funcionamiento eficiente.
+                </p>
+            </div>
+
+            <div class="paso">
+                <img class="paso-img" src="{{ asset('images/soporte5.jpg') }}" alt="Soporte">
+
                     <div class="numero">4</div>
-                    <h3>Soporte</h3>
-                    <p>
-                        Brindamos acompañamiento continuo para garantizar
-                        el correcto desempeño del sistema.
-                    </p>
-                </div>
-
+                <h3>Soporte</h3>
+                <p>
+                    Brindamos acompañamiento continuo para garantizar
+                    el correcto desempeño del sistema.
+                </p>
             </div>
 
         </div>
@@ -268,10 +263,10 @@
     <section class="servicios" id="servicios">
 
         <div class="servicios-contenido">
+        
+            <h2 class="etiqueta">SERVICIOS</h2>
 
-            <p class="etiqueta">SERVICIOS</p>
-
-            <h2>Nuestras soluciones</h2>
+             <p class="sub-servicios">Nuestras soluciones</p>
 
             <p class="subtitulo">
                 Tecnología pensada para las necesidades de tu empresa.
@@ -391,10 +386,10 @@
 
                 <h3>Navegación</h3>
 
-                <a href="#inicio">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contacto</a>
+                <a href="{{ route('inicio') }}">Inicio</a>
+                <a href="{{ route('servicios') }}">Servicios</a>
+                <a href="{{ route('nosotros') }}">Nosotros</a>
+                <a href="{{ route('contacto') }}">Contacto</a>
 
             </div>
 
@@ -409,7 +404,25 @@
 
         </div>
 
-        <div class="footer-inferior">
+            <div class="redes-sociales">
+            <a href="#" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+
+    </div>
 
             <p>
                 © 2026 BITMID. Todos los derechos reservados.

@@ -82,7 +82,8 @@ header {
     color: #FF991C;
 }
 
-.boton-login a {
+.boton-login a,
+.boton-login button {
     display: inline-block;
 
     background-color: #FF991C;
@@ -93,12 +94,26 @@ header {
 
     border-radius: 8px;
     font-size: 14px;
+    font-family: Arial, sans-serif;
+
+    border: none;
+    cursor: pointer;
 
     transition: background-color 0.3s;
 }
 
-.boton-login a:hover {
-    background-color:  #FF991C;
+.boton-login a:hover,
+.boton-login button:hover {
+    background-color: #e68a0e;
+}
+
+.boton-login form {
+    display: inline-block;
+    margin: 0;
+}
+
+.boton-login button {
+    line-height: normal;
 }
 
 .hero {
@@ -106,7 +121,7 @@ header {
 
     background-image: 
         
-        url('https://api.mapbox.com/styles/v1/a21203210/cmuwv72xm006k01rwf7wbglsu/static/-89.6071,20.9609,11.73,336,60/1280x720@2x.jpeg?attribution=false&logo=false&access_token=pk.eyJ1IjoiYTIxMjAzMjEwIiwiYSI6ImNtdXJteGE2aTAwMXUyd3B6MXY3bmJmZGoifQ.WeGbBhGLoSFhPIAswsqCMA');
+        url('https://api.mapbox.com/styles/v1/a21203210/cmuwv72xm006k01rwf7wbglsu/static/pin-l+4682b4(-89.6125,21.04465)/-89.6332,20.953,11.93,0,45/1280x720@2x.png?attribution=false&logo=false&access_token=pk.eyJ1IjoiYTIxMjAzMjEwIiwiYSI6ImNtdXJteGE2aTAwMXUyd3B6MXY3bmJmZGoifQ.WeGbBhGLoSFhPIAswsqCMA');
 
     background-size: cover;
     background-position: center;
@@ -143,13 +158,41 @@ header {
 }
 
 .nosotros-contenido {
-    max-width: 900px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    max-width: 1400px;
     margin: 0 auto;
-    text-align: center;
 }
 
+.nosotros-imagen {
+    width: 55%;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.nosotros-info {
+    width: 45%;
+}
+
+.nosotros-info h2 {
+    letter-spacing: 2px;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 15px 0 25px;
+}
+
+.nosotros-info p {
+    line-height: 1.8;
+    color: #555;
+}
 .etiqueta {
-    color: #FF991C;
+    color: #a8630e;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -157,10 +200,11 @@ header {
 }
 
 .nosotros h2 {
-    color: #172033;
-    font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 25px;
+   color: #172033;
+    letter-spacing: 2px;
+    font-size: 46px;
+    margin-bottom: 15px;
+    line-height: 1.1;
 }
 
 .descripcion {
@@ -175,7 +219,7 @@ header {
 
 .servicios {
     padding: 100px 20px;
-    background-color: #f5f7fa;
+    background-color: #f0a12a;
 }
 
 .servicios-contenido {
@@ -185,11 +229,18 @@ header {
 }
 
 .servicios h2 {
-    color: #172033;
-    font-size: 42px;
+   color: #172033;
+    letter-spacing: 2px;
+    font-size: 46px;
     margin-bottom: 15px;
 }
-
+.sub-servicios{
+    font-size: 28px;
+    color: #ffebcd;
+    letter-spacing: 0px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
 .subtitulo {
     color: #666;
     font-size: 17px;
@@ -252,6 +303,7 @@ header {
     color: #172033;
     font-size: 42px;
     margin-bottom: 15px;
+    letter-spacing: 4px;
 }
 
 .formulario {
@@ -310,7 +362,7 @@ header {
 }
 
 .footer {
-    background-color: #da8217;
+    background-color: #FF991C;
     color: white;
     padding-top: 60px;
 }
@@ -369,7 +421,7 @@ header {
 }
 
 .footer-inferior {
-    border-top: 1px solid #a8630e;
+    border-top: 1px solid #FF991C;
 
     text-align: center;
 
@@ -378,8 +430,48 @@ header {
     color: #172033;
     font-size: 14px;
 }
+/* Sección de ubicación en Contacto */
+#inicio-contacto.hero {
+    height: auto;
+    min-height: 590px;
+    padding: 35px 20px;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Contenedor de ubicación */
+#inicio-contacto .ubicacion-info {
+    width: 100%;
+    max-width: 640px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Mapa de Google */
+#inicio-contacto .ubicacion-info iframe {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+#inicio-contacto .ubicacion-info p {
+    color: #ffffff;
+}
+/* Adaptación para celulares */
 @media (max-width: 768px) {
+
+    #inicio-contacto.hero {
+        min-height: auto;
+        padding: 30px 15px;
+    }
+
+    #inicio-contacto .ubicacion-info iframe {
+        height: 350px;
+    }
+
+
 
     .tarjetas {
         flex-direction: column;
@@ -462,7 +554,7 @@ header {
 
 .ventajas {
     padding: 100px 20px;
-    background-color: #f5f7fa;
+    background-color: #f0a12a;
 }
 
 .ventajas-contenido {
@@ -472,6 +564,7 @@ header {
 }
 
 .ventajas h2 {
+    letter-spacing: 2px;
     color: #172033;
     font-size: 40px;
     margin-bottom: 50px;
@@ -500,7 +593,7 @@ header {
 }
 
 .ventaja h3 {
-    color: #c96f00;
+    color: #172033;
     margin-bottom: 12px;
 }
 
@@ -516,6 +609,14 @@ header {
     background-color: white;
 }
 
+.ventaja img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
 .proceso-contenido {
     max-width: 1200px;
     margin: 0 auto;
@@ -524,7 +625,8 @@ header {
 
 .proceso h2 {
     color: #172033;
-    font-size: 42px;
+    letter-spacing: 2px;
+    font-size: 46px;
     margin-bottom: 15px;
 }
 
@@ -544,16 +646,29 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
+.paso-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
 
 .paso:hover {
     transform: translateY(-5px);
 }
-
+.subtitulo-seccion{
+    font-size: 28px;
+    color: #c67700;
+    letter-spacing: 0px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
 .numero {
     width: 60px;
     height: 60px;
     margin: 0 auto 20px;
-    background-color: #c96f00;
+    background-color: #f0a12a;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -572,3 +687,54 @@ header {
     color: #555;
     line-height: 1.6;
 }
+
+.transicion {
+    height: 180px;
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        #fff6e8,
+        #fde7bf,
+        #f0a12a
+    );
+}
+
+.transicion-abajo {
+    height: 150px;
+    background: linear-gradient(
+        to bottom,
+        #f0a12a 0%,
+        #fde7bf 40%,
+        #fff6e8 70%,
+        #ffffff 100%
+    );
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #172033;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    background: white;
+    color: #c96f00;
+    transform: translateY(-4px);
+}
+
+
+
