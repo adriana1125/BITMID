@@ -15,6 +15,7 @@
 
 <body>
 
+    <!-- BARRA DE NAVEGACIÓN -->
     <x-header/>
 
     <section
@@ -106,7 +107,7 @@
 
 </section>
 
-<section class="servicios" id="soporte">
+<section class="servicios" id="web">
 
     <div class="nosotros-contenido">
 
@@ -216,10 +217,10 @@
 
                 <h3>Navegación</h3>
 
-                <a href="#inicio">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contacto</a>
+                <a href="{{ route('inicio') }}">Inicio</a>
+                <a href="{{ route('servicios') }}">Servicios</a>
+                <a href="{{ route('nosotros') }}">Nosotros</a>
+                <a href="{{ route('contacto') }}">Contacto</a>
 
             </div>
 
