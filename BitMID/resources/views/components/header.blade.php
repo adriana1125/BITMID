@@ -14,15 +14,15 @@
             </li>
 
             <li>
-                <a href="{{ route('inicio') }}#servicios">Servicios</a>
+                <a href="{{ route('servicios') }}">Servicios</a>
             </li>
 
             <li>
-                <a href="{{ route('inicio') }}#nosotros">Nosotros</a>
+                <a href="{{ route('nosotros') }}">Nosotros</a>
             </li>
 
             <li>
-                <a href="{{ route('inicio') }}#contacto">Contacto</a>
+                <a href="{{ route('contacto') }}">Contacto</a>
             </li>
         </ul>
 
