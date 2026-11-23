@@ -1,4 +1,4 @@
-    <x-header/>
+    <x-header page-css="css/estilos.css"/>
 
     <section
     class="hero"
@@ -61,123 +61,48 @@
 
 </section>
 
-<section class="nosotros" id="software">
+<x-servicio
+    clase="nosotros"
+    id="software"
+    imagen="images/software.jpg"
+    etiqueta="Desarrollo de software"
+    spanClass="etiqueta"
+    titulo="Programas a la medida de tu empresa"
+    descripcion="Creamos soluciones de software personalizadas para optimizar los procesos de tu empresa, mejorando la eficiencia y productividad."
+    :invertido="false"
+/>
 
-    <div class="nosotros-contenido">
+<x-servicio
+    clase="servicios"
+    id="web"
+    imagen="images/web.jpg"
+    etiqueta="Soluciones web"
+    spanClass="sub-servicios"
+    titulo="Sitios web y aplicaciones web para tu negocio"
+    descripcion="Diseñamos y desarrollamos sitios web y aplicaciones web modernas, rápidas y adaptables a las necesidades de tu negocio."
+    :invertido="true"
+/>
 
-        <div class="nosotros-imagen">
-            <img src="{{ asset('images/software.jpg') }}" alt="Desarrollo de software">
-        </div>
+<x-servicio
+    clase="servicios"
+    id="soporte"
+    imagen="images/soporte.jpg"
+    etiqueta="Soporte tecnológico"
+    spanClass="sub-servicios"
+    titulo="Soporte tecnológico para tu empresa"
+    descripcion="Ofrecemos mantenimiento y soporte técnico para garantizar el correcto funcionamiento de tus sistemas y aplicaciones."
+    :invertido="false"
+/>
 
-        <div class="nosotros-info">
+<x-servicio
+    clase="nosotros"
+    id="ciberseguridad"
+    imagen="images/ciberseguridad.jpg"
+    etiqueta="Ciberseguridad"
+    spanClass="etiqueta"
+    titulo="Protección de tus datos y sistemas"
+    descripcion="Implementamos estrategias de ciberseguridad para proteger tus datos y sistemas contra amenazas y ataques."
+    :invertido="true"
+/>
 
-            <span class="etiqueta">
-                Desarrollo de software
-            </span>
-
-            <h2>
-                Programas a la medida de tu empresa
-            </h2>
-
-            <p>
-                Creamos soluciones de software personalizadas para optimizar los procesos de tu empresa, mejorando la eficiencia y productividad.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="servicios" id="web">
-
-    <div class="nosotros-contenido">
-
-        
-
-        <div class="nosotros-info">
-
-            <span class="sub-servicios">
-                Soluciones web
-            </span>
-
-            <h2>
-                Sitios web y aplicaciones web para tu negocio
-            </h2>
-
-            <p>
-                Diseñamos y desarrollamos sitios web y aplicaciones web modernas, rápidas y adaptables a las necesidades de tu negocio.
-            </p>
-
-        </div>
-
-        <div class="nosotros-imagen">
-            <img src="{{ asset('images/web.jpg') }}" alt="Soluciones web">
-        </div>
-
-    </div>
-
-</section>
-
-<section class="servicios" id="soporte">
-
-    <div class="nosotros-contenido">
-
-        <div class="nosotros-imagen">
-            <img src="{{ asset('images/soporte.jpg') }}" alt="Soporte tecnológico">
-        </div>
-
-        <div class="nosotros-info">
-
-            <span class="sub-servicios">
-                Soporte tecnológico
-            </span>
-
-            <h2>
-                Soporte tecnológico para tu empresa
-            </h2>
-
-            <p>
-                Ofrecemos mantenimiento y soporte técnico para garantizar el correcto funcionamiento de tus sistemas y aplicaciones.
-            </p>
-
-        </div>
-
-        
-
-    </div>
-
-</section>
-
-<section class="nosotros" id="ciberseguridad">
-
-    <div class="nosotros-contenido">
-
-       
-
-        <div class="nosotros-info">
-
-            <span class="etiqueta">
-                Ciberseguridad
-            </span>
-
-            <h2>
-                Protección de tus datos y sistemas
-            </h2>
-
-            <p>
-                Implementamos estrategias de ciberseguridad para proteger tus datos y sistemas contra amenazas y ataques.
-            </p>
-
-        </div>
-
-         <div class="nosotros-imagen">
-            <img src="{{ asset('images/ciberseguridad.jpg') }}" alt="Ciberseguridad">
-        </div>
-
-    </div>
-
-</section>
-
-
-  <x-footer/>
+<x-footer/>
