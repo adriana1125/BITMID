@@ -13,9 +13,9 @@
                 <a href="{{ route('soluciones') }}">Soluciones</a>
             </li>
 
-            <li>
-                <a href="{{ route('servicios') }}">Servicios</a>
-            </li>
+           <li>
+    <a href="{{ route('inicio') }}#servicios">Servicios</a>
+        </li>
 
             <li>
                 <a href="{{ route('nosotros') }}">Nosotros</a>

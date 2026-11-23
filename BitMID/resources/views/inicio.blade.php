@@ -193,112 +193,183 @@
     </section>
 
     <!-- PROCESO DE TRABAJO -->
-    <section class="proceso">
+<section class="proceso">
 
-        <div class="proceso-contenido">
+    <div class="proceso-contenido">
 
-           <h2 class="etiqueta">PROCESO DE TRABAJO</h2>
+        <h2 class="etiqueta">PROCESO DE TRABAJO</h2>
 
-            <p class="subtitulo-seccion">¿Cómo trabajamos?</p>
+        <p class="subtitulo-seccion">¿Cómo trabajamos?</p>
 
-            <p class="subtitulo">
-                Acompañamos a nuestros clientes en cada etapa del proyecto
-                para garantizar resultados efectivos.
-            </p>
+        <p class="subtitulo">
+            Acompañamos a nuestros clientes en cada etapa del proyecto
+            para garantizar resultados efectivos.
+        </p>
 
-            <div class="pasos">
+        <div class="pasos">
 
-            <div class="paso">
+            <!-- DIAGNÓSTICO -->
+            <button type="button" class="paso paso-boton"
+                data-titulo="Diagnóstico"
+                data-descripcion="Analizamos las necesidades, objetivos y procesos actuales de tu empresa. Identificamos problemas, oportunidades de mejora y áreas donde la tecnología puede ayudarte a trabajar de manera más eficiente.">
 
-                 <img class="paso-img" src="{{ asset('images/diagnostico1.jpg') }}" alt="Diagnóstico">
-
-                    <div class="numero">1</div>
-
+                <img class="paso-img" src="{{ asset('images/diagnostico1.jpg') }}" alt="Diagnóstico">
+                <div class="numero">1</div>
                 <h3>Diagnóstico</h3>
                 <p>
                     Analizamos las necesidades y objetivos de la empresa
                     para identificar oportunidades de mejora.
                 </p>
-            </div>
+            </button>
 
-            <div class="paso">
-                    <img class="paso-img" src="{{ asset('images/diseñoweb.jpg') }}" alt="Diseño">
+            <!-- DISEÑO -->
+            <button type="button" class="paso paso-boton"
+                data-titulo="Diseño"
+                data-descripcion="A partir de los resultados del diagnóstico, definimos una propuesta tecnológica adaptada a las necesidades de tu empresa. Organizamos los requerimientos y planeamos cómo funcionará la solución.">
 
-                    <div class="numero">2</div>
+                <img class="paso-img" src="{{ asset('images/diseñoweb.jpg') }}" alt="Diseño">
+                <div class="numero">2</div>
                 <h3>Diseño</h3>
                 <p>
                     Diseñamos una solución tecnológica adaptada a los
                     requerimientos específicos del cliente.
                 </p>
-            </div>
+            </button>
 
-            <div class="paso">
-                    <img class="paso-img" src="{{ asset('images/implementacion5.jpg') }}" alt="Implementacion">
+            <!-- IMPLEMENTACIÓN -->
+            <button type="button" class="paso paso-boton"
+                data-titulo="Implementación"
+                data-descripcion="Desarrollamos e integramos la solución tecnológica propuesta. Realizamos las configuraciones y pruebas necesarias para comprobar que funcione correctamente y responda a los objetivos establecidos.">
 
-                    <div class="numero">3</div>
-
+                <img class="paso-img" src="{{ asset('images/implementacion5.jpg') }}" alt="Implementación">
+                <div class="numero">3</div>
                 <h3>Implementación</h3>
                 <p>
                     Desarrollamos e integramos la solución asegurando
                     un funcionamiento eficiente.
                 </p>
-            </div>
+            </button>
 
-            <div class="paso">
+            <!-- SOPORTE -->
+            <button type="button" class="paso paso-boton"
+                data-titulo="Soporte"
+                data-descripcion="Brindamos acompañamiento después de implementar la solución. Atendemos dudas, identificamos posibles incidencias y ayudamos a mantener el funcionamiento adecuado del sistema.">
+
                 <img class="paso-img" src="{{ asset('images/soporte5.jpg') }}" alt="Soporte">
-
-                    <div class="numero">4</div>
+                <div class="numero">4</div>
                 <h3>Soporte</h3>
                 <p>
                     Brindamos acompañamiento continuo para garantizar
                     el correcto desempeño del sistema.
                 </p>
-            </div>
+            </button>
 
         </div>
+    </div>
 
-    </section>
+    <!-- VENTANA EMERGENTE -->
+    <div id="modal-proceso" class="modal-proceso" hidden>
 
-    <!-- SERVICIOS -->
-    <section class="servicios" id="servicios">
+        <div class="modal-contenido" role="dialog" aria-modal="true"
+            aria-labelledby="modal-titulo">
 
-        <div class="servicios-contenido">
-        
-            <h2 class="etiqueta">SERVICIOS</h2>
+            <button type="button" class="modal-cerrar" aria-label="Cerrar ventana">
+                &times;
+            </button>
 
-             <p class="sub-servicios">Nuestras soluciones</p>
+            <h2 id="modal-titulo"></h2>
 
-            <p class="subtitulo">
-                Tecnología pensada para las necesidades de tu empresa.
+            <p id="modal-descripcion"></p>
+
+            <p class="modal-mensaje">
+                Para comenzar a trabajar en esta etapa, inicia sesión en BitMID.
             </p>
 
-            <div class="tarjetas">
+            <a href="{{ route('login') }}" class="modal-login">
+                Iniciar sesión
+            </a>
 
-                @foreach($servicios as $servicio)
+        </div>
+    </div>
 
-                    <div class="tarjeta">
+</section>
 
-                        <div class="icono">
-                            {{ $servicio['icono'] }}
-                        </div>
 
-                        <h3>
-                            {{ $servicio['nombre'] }}
-                        </h3>
+<!-- SERVICIOS -->
+<section class="servicios" id="servicios">
 
-                        <p>
-                            {{ $servicio['descripcion'] }}
-                        </p>
+    <div class="servicios-contenido">
 
-                    </div>
+        <h2 class="etiqueta">SERVICIOS</h2>
 
-                @endforeach
+        <p class="sub-servicios">Nuestras soluciones</p>
 
-            </div>
+        <p class="subtitulo">
+            Tecnología pensada para las necesidades de tu empresa.
+        </p>
+
+        <div class="tarjetas">
+
+           
+@foreach($servicios as $servicio)
+
+    <div class="tarjeta">
+
+        <div class="icono">
+            {{ $servicio['icono'] }}
+        </div>
+
+        <h3>
+            {{ $servicio['nombre'] }}
+        </h3>
+
+
+        
+
+<button
+    type="button"
+    class="servicio-boton"
+    data-titulo="{{ $servicio['nombre'] }}"
+    data-descripcion="{{ $servicio['detalle'] }}"
+>
+    Conocer más <span>→</span>
+</button>
+
+    </div>
+
+@endforeach
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+<!-- VENTANA EMERGENTE DE SERVICIOS -->
+<div id="modal-servicio" class="modal-proceso" hidden>
+
+    <div class="modal-contenido" role="dialog" aria-modal="true" aria-labelledby="modal-servicio-titulo">
+
+        <button type="button" class="modal-cerrar" aria-label="Cerrar ventana">
+            &times;
+        </button>
+
+        <h2 id="modal-servicio-titulo"></h2>
+
+        <p id="modal-servicio-descripcion"></p>
+
+        <p class="modal-mensaje">
+            ¿Te interesa implementar esta solución en tu empresa?
+            Inicia sesión en BitMID para comenzar.
+        </p>
+
+        <a href="{{ route('login') }}" class="modal-login">
+            Iniciar sesión
+        </a>
+
+    </div>
+
+</div>
 
     <!-- CONTACTO -->
     <section class="contacto" id="contacto">
@@ -431,6 +502,67 @@
         </div>
 
     </footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Seleccionamos los botones de los servicios
+    const botones = document.querySelectorAll('.servicio-boton');
+
+    // Seleccionamos la ventana emergente
+    const modal = document.getElementById('modal-servicio');
+
+    // Obtenemos los elementos donde aparecerá la información
+    const titulo = document.getElementById('modal-servicio-titulo');
+    const descripcion = document.getElementById('modal-servicio-descripcion');
+
+    // Botón para cerrar la ventana
+    const cerrar = modal ? modal.querySelector('.modal-cerrar') : null;
+
+    // Comprobamos que existan los elementos necesarios
+    if (!modal || !titulo || !descripcion || !cerrar) {
+        return;
+    }
+
+    // Abrir la ventana al hacer clic en cada servicio
+    botones.forEach(function (boton) {
+
+        boton.addEventListener('click', function () {
+
+            titulo.textContent = boton.dataset.titulo;
+            descripcion.textContent = boton.dataset.descripcion;
+
+            modal.hidden = false;
+        });
+
+    });
+
+    // Cerrar con la X
+    cerrar.addEventListener('click', function () {
+        modal.hidden = true;
+    });
+
+    // Cerrar al hacer clic fuera de la ventana
+    modal.addEventListener('click', function (event) {
+
+        if (event.target === modal) {
+            modal.hidden = true;
+        }
+
+    });
+
+    // Cerrar al presionar Escape
+    document.addEventListener('keydown', function (event) {
+
+        if (event.key === 'Escape') {
+            modal.hidden = true;
+        }
+
+    });
+
+});
+</script>
 
 </body>
 </html>

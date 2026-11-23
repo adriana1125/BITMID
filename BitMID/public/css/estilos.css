@@ -736,5 +736,250 @@ header {
     transform: translateY(-4px);
 }
 
+/* TARJETAS INTERACTIVAS DEL PROCESO */
+.paso-boton {
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    color: inherit;
+}
+
+.paso-boton:focus-visible {
+    outline: 3px solid #FF991C;
+    outline-offset: 4px;
+}
+
+/* FONDO OSCURO DEL MODAL */
+.modal-proceso {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: rgba(23, 32, 51, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-proceso[hidden] {
+    display: none !important;
+}
+
+/* CUADRO BLANCO DEL MODAL */
+.modal-contenido {
+    background-color: white;
+    width: 100%;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* BOTÓN PARA CERRAR */
+.modal-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #172033;
+}
+
+/* TÍTULO Y DESCRIPCIÓN */
+.modal-contenido h2 {
+    color: #172033;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.modal-contenido p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+/* MENSAJE PARA INICIAR SESIÓN */
+.modal-mensaje {
+    font-weight: bold;
+}
+
+/* ENLACE DE INICIAR SESIÓN */
+.modal-login {
+    display: inline-block;
+    background-color: #FF991C;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.modal-login:hover {
+    background-color: #e88912;
+}
+
+.servicio-boton {
+    margin-top: 18px;
+    padding: 5px 0;
+    border: none;
+    background: transparent;
+    color: #FF991C;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.servicio-boton span {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.servicio-boton:hover {
+    color: #e88912;
+}
+
+.servicio-boton:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =================================
+   FORMULARIO DE SOLICITUD DE SERVICIOS
+================================= */
+
+.solicitud-servicio {
+    background-color: #f7f8fa;
+    min-height: 80vh;
+    padding: 60px 8%;
+}
+
+.solicitud-encabezado {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.volver-servicios {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #172033;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.volver-servicios:hover {
+    color: #ff991c;
+}
+
+.solicitud-icono {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.solicitud-encabezado h1 {
+    color: #172033;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.solicitud-encabezado p {
+    color: #626b7a;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.solicitud-formulario {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+.solicitud-formulario h2 {
+    color: #172033;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.solicitud-formulario > p {
+    color: #626b7a;
+    margin-bottom: 30px;
+}
+
+.campo-solicitud {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.campo-solicitud label {
+    color: #172033;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.campo-solicitud input,
+.campo-solicitud textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d9dee7;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.campo-solicitud textarea {
+    resize: vertical;
+}
+
+.campo-solicitud input:focus,
+.campo-solicitud textarea:focus {
+    outline: none;
+    border-color: #ff991c;
+    box-shadow: 0 0 0 3px rgba(255, 153, 28, 0.12);
+}
+
+.boton-solicitud {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff991c;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-solicitud:hover {
+    background-color: #e9850c;
+}
+
+@media (max-width: 600px) {
+    .solicitud-servicio {
+        padding: 35px 5%;
+    }
+
+    .solicitud-formulario {
+        padding: 25px 20px;
+    }
+
+    .solicitud-encabezado h1 {
+        font-size: 28px;
+    }
+}
 
 
