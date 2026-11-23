@@ -198,6 +198,120 @@
             margin-bottom: 15px;
         }
 
+        /* ENCABEZADOS DE SECCIÓN */
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header .section-title {
+            margin-bottom: 0;
+        }
+
+        .btn-section-edit {
+            background: #192236;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-section-edit:hover {
+            background: #f47721;
+        }
+
+        /* FORMULARIOS DE EDICIÓN */
+
+        .edit-form {
+            background: white;
+            padding: 25px;
+            border-radius: 13px;
+            margin-bottom: 35px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .edit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .edit-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .edit-field label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #192236;
+        }
+
+        .edit-field input,
+        .edit-field select,
+        .edit-field textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        .edit-field textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .edit-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .btn-save {
+            background: #198754;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn-cancel {
+            background: #e5e7eb;
+            color: #192236;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .alert-success {
+            background: #d1e7dd;
+            color: #0f5132;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .edit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+        }
         /* PIE */
 
         .footer {
@@ -252,35 +366,16 @@
 
 <body>
 
-    <!-- NAVBAR -->
-
-   <header>
-        <nav class="navbar">
-
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{{ route('inicio') }}" aria-label="BitMID, ir al inicio">
-                    <img src="{{ asset('images/BITMID2.png') }}" alt="Logo de BitMID">
-                    <h2>BitMID</h2>
-                </a>
-            </div>
-
-            <ul class="menu">
-                <li><a href="{{ route('soluciones') }}">Soluciones</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-
-            <button class="btn-logout">
-            Cerrar sesión
-        </button>
-
-        </nav>
-    </header>
+    <x-header/>
 
 
     <main class="container">
 
+        @if(session('success'))
+            <div class="alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <!-- BIENVENIDA -->
 
         <div class="welcome">
@@ -328,87 +423,127 @@
 
         <!-- INFORMACIÓN GENERAL -->
 
-        <h2 class="section-title">
-            Información general
-        </h2>
+        <div class="section-header">
+            <h2 class="section-title">Información general</h2>
+
+            <button type="button" class="btn-section-edit"
+                onclick="mostrarFormulario('form-general')">
+                ✎ Editar
+            </button>
+        </div>
+
+        <!-- FORMULARIO DE EDICIÓN GENERAL -->
+
+        <form id="form-general"
+            class="edit-form"
+            action="{{ route('perfil.actualizar.general') }}"
+            method="POST"
+            style="display: none;">
+
+            @csrf
+
+            <div class="edit-grid">
+
+                <div class="edit-field">
+                    <label>Correo electrónico</label>
+                    <input type="email" name="correo"
+                        value="{{ session('empresa_general.correo', $empresa->correo ?? 'contacto@empresa.com') }}"
+                        required>
+                </div>
+
+                <div class="edit-field">
+                    <label>Nombre de la empresa</label>
+                    <input type="text" name="nombre"
+                        value="{{ session('empresa_general.nombre', $empresa->nombre ?? 'Tecnologías del Sureste S.A. de C.V.') }}"
+                        required>
+                </div>
+
+                <div class="edit-field">
+                    <label>Giro empresarial</label>
+                    <select name="giro" required>
+                        @foreach(['Servicios', 'Comercio', 'Manufactura'] as $giro)
+                            <option value="{{ $giro }}"
+                                {{ session('empresa_general.giro', $empresa->giro ?? 'Servicios') == $giro ? 'selected' : '' }}>
+                                {{ $giro }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="edit-field">
+                    <label>Número de empleados</label>
+                    <input type="text" name="empleados"
+                        value="{{ session('empresa_general.empleados', $empresa->empleados ?? '15 - 50 empleados') }}"
+                        required>
+                </div>
+
+                <div class="edit-field">
+                    <label>Estado</label>
+                    <input type="text" name="estado"
+                        value="{{ session('empresa_general.estado', $empresa->estado ?? 'Yucatán') }}"
+                        required>
+                </div>
+
+                <div class="edit-field">
+                    <label>Municipio</label>
+                    <input type="text" name="municipio"
+                        value="{{ session('empresa_general.municipio', $empresa->municipio ?? 'Mérida') }}"
+                        required>
+                </div>
+
+            </div>
+
+            <div class="edit-actions">
+                <button type="button" class="btn-cancel"
+                    onclick="ocultarFormulario('form-general')">
+                    Cancelar
+                </button>
+
+                <button type="submit" class="btn-save">
+                    Guardar cambios
+                </button>
+            </div>
+
+        </form>
+
+        <!-- TARJETAS DE INFORMACIÓN GENERAL -->
 
         <div class="profile-grid">
 
             <div class="info-card">
-
                 <div class="info-icon">✉</div>
-
                 <small>Correo electrónico</small>
-
-                <h3>
-                    {{ $empresa->correo ?? 'contacto@empresa.com' }}
-                </h3>
-
+                <h3>{{ session('empresa_general.correo', $empresa->correo ?? 'contacto@empresa.com') }}</h3>
             </div>
 
-
             <div class="info-card">
-
                 <div class="info-icon">🏢</div>
-
                 <small>Nombre de la empresa</small>
-
-                <h3>
-                    {{ $empresa->nombre ?? 'Tecnologías del Sureste S.A. de C.V.' }}
-                </h3>
-
+                <h3>{{ session('empresa_general.nombre', $empresa->nombre ?? 'Tecnologías del Sureste S.A. de C.V.') }}</h3>
             </div>
 
-
             <div class="info-card">
-
                 <div class="info-icon">📊</div>
-
                 <small>Giro empresarial</small>
-
-                <h3>
-                    {{ $empresa->giro ?? 'Servicios' }}
-                </h3>
-
+                <h3>{{ session('empresa_general.giro', $empresa->giro ?? 'Servicios') }}</h3>
             </div>
 
-
             <div class="info-card">
-
                 <div class="info-icon">👥</div>
-
                 <small>Número de empleados</small>
-
-                <h3>
-                    {{ $empresa->empleados ?? '15 - 50 empleados' }}
-                </h3>
-
+                <h3>{{ session('empresa_general.empleados', $empresa->empleados ?? '15 - 50 empleados') }}</h3>
             </div>
 
-
             <div class="info-card">
-
                 <div class="info-icon">📍</div>
-
                 <small>Estado</small>
-
-                <h3>
-                    {{ $empresa->estado ?? 'Yucatán' }}
-                </h3>
-
+                <h3>{{ session('empresa_general.estado', $empresa->estado ?? 'Yucatán') }}</h3>
             </div>
 
-
             <div class="info-card">
-
                 <div class="info-icon">🌎</div>
-
                 <small>Municipio</small>
-
-                <h3>
-                    {{ $empresa->municipio ?? 'Mérida' }}
-                </h3>
-
+                <h3>{{ session('empresa_general.municipio', $empresa->municipio ?? 'Mérida') }}</h3>
             </div>
 
         </div>
@@ -416,63 +551,90 @@
 
         <!-- INFORMACIÓN COMPLEMENTARIA -->
 
-        <h2 class="section-title">
-            Información complementaria
-        </h2>
+        <div class="section-header">
+            <h2 class="section-title">Información complementaria</h2>
+
+            <button type="button" class="btn-section-edit"
+                onclick="mostrarFormulario('form-complementaria')">
+                ✎ Editar
+            </button>
+        </div>
+
+        <!-- FORMULARIO DE EDICIÓN COMPLEMENTARIA -->
+
+        <form id="form-complementaria"
+            class="edit-form"
+            action="{{ route('perfil.actualizar.complementaria') }}"
+            method="POST"
+            style="display: none;">
+
+            @csrf
+
+            <div class="edit-grid">
+
+                <div class="edit-field">
+                    <label>Teléfono de contacto</label>
+                    <input type="tel" name="telefono"
+                        value="{{ session('empresa_complementaria.telefono', $empresa->telefono ?? '999 123 4567') }}"
+                        required>
+                </div>
+
+                <div class="edit-field">
+                    <label>Sitio web</label>
+                    <input type="text" name="sitio_web"
+                        value="{{ session('empresa_complementaria.sitio_web', $empresa->sitio_web ?? 'www.empresa.com') }}">
+                </div>
+
+                <div class="edit-field" style="grid-column: 1 / -1;">
+                    <label>Descripción de la empresa</label>
+                    <textarea name="descripcion">{{ session('empresa_complementaria.descripcion', $empresa->descripcion ?? 'Empresa dedicada a ofrecer soluciones tecnológicas.') }}</textarea>
+                </div>
+
+            </div>
+
+            <div class="edit-actions">
+                <button type="button" class="btn-cancel"
+                    onclick="ocultarFormulario('form-complementaria')">
+                    Cancelar
+                </button>
+
+                <button type="submit" class="btn-save">
+                    Guardar cambios
+                </button>
+            </div>
+
+        </form>
+
+        <!-- TARJETAS DE INFORMACIÓN COMPLEMENTARIA -->
 
         <div class="profile-grid">
 
             <div class="info-card">
-
                 <div class="info-icon">📞</div>
-
                 <small>Teléfono de contacto</small>
-
-                <h3>
-                    {{ $empresa->telefono ?? '999 123 4567' }}
-                </h3>
-
+                <h3>{{ session('empresa_complementaria.telefono', $empresa->telefono ?? '999 123 4567') }}</h3>
             </div>
 
-
             <div class="info-card">
-
                 <div class="info-icon">🌐</div>
-
                 <small>Sitio web</small>
-
-                <h3>
-                    {{ $empresa->sitio_web ?? 'www.empresa.com' }}
-                </h3>
-
+                <h3>{{ session('empresa_complementaria.sitio_web', $empresa->sitio_web ?? 'www.empresa.com') }}</h3>
             </div>
 
-
             <div class="info-card">
-
                 <div class="info-icon">📅</div>
-
                 <small>Fecha de registro</small>
-
                 <h3>
                     {{ isset($empresa->created_at)
                         ? $empresa->created_at->format('d/m/Y')
                         : '20/11/2026' }}
                 </h3>
-
             </div>
 
-
             <div class="info-card">
-
                 <div class="info-icon">📝</div>
-
                 <small>Descripción de la empresa</small>
-
-                <h3>
-                    {{ $empresa->descripcion ?? 'Empresa dedicada a ofrecer soluciones tecnológicas.' }}
-                </h3>
-
+                <h3>{{ session('empresa_complementaria.descripcion', $empresa->descripcion ?? 'Empresa dedicada a ofrecer soluciones tecnológicas.') }}</h3>
             </div>
 
         </div>
@@ -488,5 +650,14 @@
 
     </footer>
 
+    <script>
+        function mostrarFormulario(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function ocultarFormulario(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
 </body>
 </html>
