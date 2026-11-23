@@ -15,31 +15,7 @@
 
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
-    <header>
-        <nav class="navbar">
-
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{{ route('inicio') }}" aria-label="BitMID, ir al inicio">
-                    <img src="{{ asset('images/BITMID2.png') }}" alt="Logo de BitMID">
-                    <h2>BitMID</h2>
-                </a>
-            </div>
-
-            <ul class="menu">
-                <li><a href="{{ route('soluciones') }}">Soluciones</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-
-            <div class="boton-login">
-               <a href="{{ route('login') }}">Iniciar Sesión</a>
-                <a href="/registro" class="btn-registro">Registrarse</a>
-            </div>
-
-        </nav>
-    </header>
+    <x-header/>
 
     <section
     class="hero"
