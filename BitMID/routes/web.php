@@ -128,3 +128,14 @@ Route::post('/perfil/actualizar-complementaria', function (\Illuminate\Http\Requ
     return redirect()->route('perfil')->with('success', 'Información complementaria actualizada correctamente.');
 
 })->name('perfil.actualizar.complementaria');
+Route::get('/contacto', function () {
+    return view('contacto');
+})->name('contacto');
+
+Route::get('/servicios', function () {
+    return view('servicios');
+})->name('servicios');
+
+Route::get('/nosotros', function () {
+    return view('nosotros');
+})->name('nosotros');
