@@ -9,11 +9,7 @@
 </head>
 <body>
 
-<div class="login-container">
-
-    <div class="login-card">
-
-        <img src="{{ asset('images/BITMID2.png') }}" alt="BitMID" class="logo">
+<x-auth-card>
 
         <h2>Crear Cuenta</h2>
 
@@ -23,34 +19,31 @@
 
         <form action="/datos-empresa" method="GET">
 
-            <div class="campo">
-                <label>Correo electrónico</label>
-                <input
-                    type="email"
-                    placeholder="ejemplo@empresa.com"
-                    required>
-            </div>
+            <x-campo-form
+            label="Correo electrónico"
+            type="email"
+            placeholder="ejemplo@empresa.com"
+        />
 
-            <div class="campo">
-                <label>Contraseña</label>
-                <input
-                    type="password"
-                    placeholder="••••••••"
-                    required>
-            </div>
+        <x-campo-form
+            label="Contraseña"
+            type="password"
+            placeholder="••••••••"
+        />
 
-            <div class="campo">
-                <label>Confirmar contraseña</label>
-                <input
-                    type="password"
-                    placeholder="••••••••"
-                    required>
-            </div>
+        <x-campo-form
+            label="Confirmar contraseña"
+            type="password"
+            placeholder="••••••••"
+        />
 
-           <button type="submit">
-                Registrarme
-            </button>
-        </form>
+        <button type="submit">
+            Registrarme
+        </button>
+
+    </form>
+
+  
 
         <div style="margin-top:20px; text-align:center;">
 
@@ -63,10 +56,7 @@
             </a>
 
         </div>
-
-    </div>
-
-</div>
+</x-auth-card>
 
 </body>
 </html>
