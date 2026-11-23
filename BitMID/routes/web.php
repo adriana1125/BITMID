@@ -71,3 +71,15 @@ Route::get('/perfil', function () {
 Route::get('/soluciones', function () {
     return view('soluciones');
 })->name('soluciones');
+
+Route::get('/contacto', function () {
+    return view('contacto');
+})->name('contacto');
+
+Route::get('/servicios', function () {
+    return view('servicios');
+})->name('servicios');
+
+Route::get('/nosotros', function () {
+    return view('nosotros');
+})->name('nosotros');
