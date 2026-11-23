@@ -94,3 +94,37 @@ Route::get('/perfil', function () {
 Route::get('/soluciones', function () {
     return view('soluciones');
 })->name('soluciones');
+
+// Actualizar información general
+Route::post('/perfil/actualizar-general', function (\Illuminate\Http\Request $request) {
+
+    $datos = $request->validate([
+        'correo' => 'required|email',
+        'nombre' => 'required|string|max:255',
+        'giro' => 'required|string|max:100',
+        'empleados' => 'required|string|max:100',
+        'estado' => 'required|string|max:100',
+        'municipio' => 'required|string|max:100',
+    ]);
+
+    session(['empresa_general' => $datos]);
+
+    return redirect()->route('perfil')->with('success', 'Información general actualizada correctamente.');
+
+})->name('perfil.actualizar.general');
+
+
+// Actualizar información complementaria
+Route::post('/perfil/actualizar-complementaria', function (\Illuminate\Http\Request $request) {
+
+    $datos = $request->validate([
+        'telefono' => 'required|string|max:20',
+        'sitio_web' => 'nullable|string|max:255',
+        'descripcion' => 'nullable|string|max:1000',
+    ]);
+
+    session(['empresa_complementaria' => $datos]);
+
+    return redirect()->route('perfil')->with('success', 'Información complementaria actualizada correctamente.');
+
+})->name('perfil.actualizar.complementaria');

@@ -35,14 +35,14 @@
                     Perfil
                 </a>
 
-               <!-- Botón Cerrar sesión -->
-<form action="{{ route('cerrar.sesion') }}" method="POST" style="display: inline;">
-    @csrf
+                <!-- Botón Cerrar sesión -->
+                <form action="{{ route('cerrar.sesion') }}" method="POST" style="display: inline;">
+                    @csrf
 
-    <button type="submit" class="btn-registro btn-cerrar-sesion">
-        Cerrar sesión
-    </button>
-</form>
+                    <button type="submit" class="btn-registro btn-cerrar-sesion">
+                        Cerrar sesión
+                    </button>
+                </form>
 
             @else
 
