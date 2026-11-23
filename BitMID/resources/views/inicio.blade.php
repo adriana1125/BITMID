@@ -1,21 +1,3 @@
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Empresa TI</title>
-
-    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
-</head>
-
-<body>
-
-    <!-- BARRA DE NAVEGACIÓN -->
     <x-header/>
 
    
