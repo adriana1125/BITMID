@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 
     <title>Mi perfil | BitMID</title>
 
@@ -253,23 +254,28 @@
 
     <!-- NAVBAR -->
 
-    <header class="navbar">
+   <header>
+        <nav class="navbar">
 
-        <div class="logo">
-            <span>◈</span> BitMID
-        </div>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ route('inicio') }}" aria-label="BitMID, ir al inicio">
+                    <img src="{{ asset('images/BITMID2.png') }}" alt="Logo de BitMID">
+                    <h2>BitMID</h2>
+                </a>
+            </div>
 
-        <nav class="nav-links">
-            <a href="/">Inicio</a>
-            <a href="/#soluciones">Soluciones</a>
-            <a href="/#servicios">Servicios</a>
-            <a href="/#nosotros">Nosotros</a>
-        </nav>
+            <ul class="menu">
+                <li><a href="{{ route('soluciones') }}">Soluciones</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
 
-        <button class="btn-logout">
+            <button class="btn-logout">
             Cerrar sesión
         </button>
 
+        </nav>
     </header>
 
 

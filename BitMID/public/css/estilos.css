@@ -166,6 +166,7 @@ header {
 }
 
 .nosotros-info h2 {
+    letter-spacing: 2px;
     font-size: 3rem;
     line-height: 1.2;
     margin: 15px 0 25px;
@@ -185,7 +186,7 @@ header {
 
 .nosotros h2 {
    color: #172033;
-    letter-spacing: -4px;
+    letter-spacing: 2px;
     font-size: 46px;
     margin-bottom: 15px;
     line-height: 1.1;
@@ -214,7 +215,7 @@ header {
 
 .servicios h2 {
    color: #172033;
-    letter-spacing: -4px;
+    letter-spacing: 2px;
     font-size: 46px;
     margin-bottom: 15px;
 }
@@ -287,6 +288,7 @@ header {
     color: #172033;
     font-size: 42px;
     margin-bottom: 15px;
+    letter-spacing: 4px;
 }
 
 .formulario {
@@ -507,6 +509,7 @@ header {
 }
 
 .ventajas h2 {
+    letter-spacing: 2px;
     color: #172033;
     font-size: 40px;
     margin-bottom: 50px;
@@ -567,7 +570,7 @@ header {
 
 .proceso h2 {
     color: #172033;
-    letter-spacing: -4px;
+    letter-spacing: 2px;
     font-size: 46px;
     margin-bottom: 15px;
 }
