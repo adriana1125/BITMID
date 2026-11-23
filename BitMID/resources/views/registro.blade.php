@@ -21,7 +21,7 @@
             Crea tus credenciales para comenzar tu proceso de transformación digital.
         </p>
 
-        <form action="/giro-empresa" method="GET">
+        <form action="/datos-empresa" method="GET">
 
             <div class="campo">
                 <label>Correo electrónico</label>

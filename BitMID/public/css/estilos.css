@@ -737,4 +737,13 @@ header {
 }
 
 
+.campo input:focus,
+.campo select:focus{
+    outline:none;
+    border-color:#FF991C;
+}
+
+.oculto{
+    display:none;
+}
 
