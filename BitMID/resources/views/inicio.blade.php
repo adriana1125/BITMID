@@ -1,87 +1,17 @@
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Empresa TI</title>
-
-    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
-</head>
-
-<body>
-
-    <!-- BARRA DE NAVEGACIÓN -->
-    <x-header/>
+    <x-header page-css="css/estilos.css"/>
 
    
     
 <!-- INICIO CON VIDEO DE FONDO -->
-<section
-    class="hero"
-    id="inicio"
-    style="
-        position: relative;
-        width: 100%;
-        height: 450px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: #172033;
-    "
->
-
-    <video
-        autoplay
-        muted
-        loop
-        playsinline
-        style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            z-index: 0;
-        "
-    >
-        <source src="{{ asset('images/bitmid.mp4') }}" type="video/mp4">
-        Tu navegador no puede reproducir este video.
-    </video>
-
-    <div
-        class="hero-contenido"
-        style="
-            position: relative;
-            z-index: 2;
-            color: white;
-            max-width: 900px;
-            padding: 20px;
-        "
-    >
-
-        <h1>
-            Soluciones tecnológicas
-            <br>
-            que conectan tu empresa
-        </h1>
-
-        <p>
-            Gestiona ventas, clientes, inventario y proyectos
-            desde un solo panel inteligente.
-        </p>
-
-    </div>
-
-</section>
+ <x-hero-video
+        id="inicio"
+        video="images/bitmid.mp4"
+        titulo='Soluciones tecnológicas
+            que conectan tu empresa'
+        descripcion="Gestiona ventas, clientes, inventario y proyectos
+            desde un solo panel inteligente."
+        color-texto="white"
+    />
 
 
     <!-- NOSOTROS -->
@@ -372,137 +302,10 @@
 </div>
 
     <!-- CONTACTO -->
-    <section class="contacto" id="contacto">
-
-        <div class="contacto-contenido">
-
-            <p class="etiqueta">CONTACTO</p>
-
-            <h2>¿Tienes un proyecto en mente?</h2>
-
-            <p class="subtitulo">
-                Cuéntanos sobre tu proyecto y nos pondremos en contacto contigo.
-            </p>
-
-            <form class="formulario">
-
-                <div class="campo">
-                    <label for="nombre">Nombre</label>
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Escribe tu nombre"
-                    >
-                </div>
-
-                <div class="campo">
-                    <label for="correo">Correo electrónico</label>
-                    <input
-                        type="email"
-                        id="correo"
-                        name="correo"
-                        placeholder="ejemplo@correo.com"
-                    >
-                </div>
-
-                <div class="campo">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea
-                        id="mensaje"
-                        name="mensaje"
-                        placeholder="Cuéntanos sobre tu proyecto"
-                        rows="5"
-                    ></textarea>
-                </div>
-
-                <div
-                    class="g-recaptcha campo"
-                    data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"
-                ></div>
-
-                @error('captcha')
-                    <span class="text-danger" style="color: red; font-size: 0.9em;">
-                        {{ $message }}
-                    </span>
-                @enderror
-
-                <button type="submit">
-                    Enviar mensaje
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
+    <x-contacto-form/>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-
-        <div class="footer-contenido">
-
-            <div class="footer-empresa">
-
-                <h2>BITMID</h2>
-
-                <p>
-                    Soluciones tecnológicas
-                    para tu empresa.
-                </p>
-
-            </div>
-
-            <div class="footer-enlaces">
-
-                <h3>Navegación</h3>
-
-                <a href="{{ route('inicio') }}">Inicio</a>
-                <a href="{{ route('servicios') }}">Servicios</a>
-                <a href="{{ route('nosotros') }}">Nosotros</a>
-                <a href="{{ route('contacto') }}">Contacto</a>
-
-            </div>
-
-            <div class="footer-contacto">
-
-                <h3>Contacto</h3>
-
-                <p>contacto@bitmid.com</p>
-                <p>Mérida, Yucatán</p>
-
-            </div>
-
-        </div>
-
-            <div class="redes-sociales">
-            <a href="#" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="#" target="_blank">
-            <i class="fab fa-instagram"></i>
-            </a>
-
-            <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-            </a>
-
-            <a href="#" target="_blank">
-            <i class="fab fa-x-twitter"></i>
-            </a>
-        </div>
-
-    </div>
-
-            <p>
-                © 2026 BITMID. Todos los derechos reservados.
-            </p>
-
-        </div>
-
-    </footer>
-
+    <x-footer/>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
