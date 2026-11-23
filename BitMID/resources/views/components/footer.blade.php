@@ -35,22 +35,22 @@
 
         </div>
 
-            <div class="redes-sociales">
+            <div class="redes-sociales" style="text-decoration:none;">
             <a href="#" target="_blank">
-            <i class="fab fa-facebook-f"></i>
+            <i class="fa-solid fa-facebook"></i>
+            
+
+            <a href="#" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+            
+
+            <a href="#" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
             </a>
 
             <a href="#" target="_blank">
-            <i class="fab fa-instagram"></i>
-            </a>
-
-            <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-            </a>
-
-            <a href="#" target="_blank">
-            <i class="fab fa-x-twitter"></i>
-            </a>
+            <i class="fa-brands fa-x-twitter"></i>
+            
         </div>
 
     </div>
