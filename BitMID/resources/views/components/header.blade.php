@@ -1,3 +1,7 @@
+@props([
+    'pageCss' => null
+])
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,7 +10,11 @@
 
     <title>Empresa TI</title>
 
-    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+
+{{-- Estilos particulares de cada vista --}}
+@if($pageCss)
+    <link rel="stylesheet" href="{{ asset($pageCss) }}">
+@endif
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
